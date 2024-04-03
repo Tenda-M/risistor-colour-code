@@ -1,0 +1,35 @@
+/* Give to body font to use*/
+body {
+    font-family: sans-serif;
+}
+/* style the drop down button */
+.dropdown__band{
+   border: 1px solid #eee; 
+   width: 100px;
+}
+
+/* seslect band button drop down hyperling*/
+.dropdown__band a{
+    display: block;
+    padding: 4px 10px;
+}
+
+/* the drop down button */
+.dropdown__button{
+    background-color:wheat;
+    border: none;
+    padding: auto;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer; /* to have a selection of a finger pointer*/
+}
+
+/* to hide the drop down*/
+.hide{
+    display: none;
+}
+
+/*drop down icon*/
+.dropdown__button, i{
+    padding: 4px 4px;
+}
