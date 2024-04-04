@@ -1,4 +1,4 @@
-//unhide the drop down button
+/*/unhide the drop down button
 const dropdownBtn = document.querySelector(".dropdown__button");
 const dropdownBand = document.querySelector(".dropdown__band");
 
@@ -14,5 +14,5 @@ window.addEventListener('click', (e) =>{
 if(e.target!==dropdownBtn){
 dropdownBand.classList.add("hide");
 }
-});
+}); */
 

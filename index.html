@@ -35,10 +35,104 @@
                 <button class="6-band-button">Six band</button>
                     <i class=" fas fa-six"></i> -->
             </div>
+            <br>
             <div class="band-select">
-                <button class="dropdown__button">First band<i class="fa fa-chevron-circle-down"></i></button>
-                <div class="dropdown__band hide">
-                    <a href="#/Colour">Black</a>
+                <!--<button class="dropdown__button">First band<i class="fa fa-chevron-circle-down"></i></button>
+                <div class="dropdown__band hide">-->
+                <div>
+                    <!--Select Tag and option for the first band-->
+                    <label>Select First Band</label> <br>
+                    <select id="select-one" onchange="change_color1(this);">
+                        <option>Colour band</option>
+                        <option value=0>Black</option>
+                        <option value=1>Brown</option>
+                        <option value=2>Red</option>
+                        <option value=3>Orange</option>
+                        <option value=4>Yellow</option>
+                        <option value=5>Green</option>
+                        <option value=6>Blue</option>
+                        <option value=7>Violet</option>
+                        <option value=8>Grey</option>
+                        <option value=9>White</option>
+                        <!-- <option value=10>Gold</option>
+                        <option value=11>Silver</option>  -->
+                    </select>
+                </div>
+
+                <div>
+                    <!--Select Tag and option for the first band-->
+                    <label>Select Second Band</label> <br>
+                    <select id="select-two" onchange="change_color1(this);">
+                        <option>Colour band</option>
+                        <option value=0>Black</option>
+                        <option value=1>Brown</option>
+                        <option value=2>Red</option>
+                        <option value=3>Orange</option>
+                        <option value=4>Yellow</option>
+                        <option value=5>Green</option>
+                        <option value=6>Blue</option>
+                        <option value=7>Violet</option>
+                        <option value=8>Grey</option>
+                        <option value=9>White</option>
+                        <!-- <option value=10>Gold</option>
+                        <option value=11>Silver</option>  -->
+                    </select>
+                </div>
+
+                <div>
+                    <!--Select Tag and option for the first band-->
+                    <label>Select Third Band</label> <br>
+                    <select id="select-one" onchange="change_color1(this);">
+                        <option>Colour band</option>
+                        <option value=0>Black</option>
+                        <option value=1>Brown</option>
+                        <option value=2>Red</option>
+                        <option value=3>Orange</option>
+                        <option value=4>Yellow</option>
+                        <option value=5>Green</option>
+                        <option value=6>Blue</option>
+                        <option value=7>Violet</option>
+                        <option value=8>Grey</option>
+                        <option value=9>White</option>
+                        <!-- <option value=10>Gold</option>
+                        <option value=11>Silver</option>  -->
+                    </select>
+                </div>
+                <div>
+                    <!--Select Tag and option for the first band-->
+                    <label>Select 4th Band (multipler)</label> <br>
+                    <select id="select-one" onchange="change_color1(this);">
+                        <option>Colour band</option>
+                        <option value=0>Black</option>
+                        <option value=1>Brown</option>
+                        <option value=2>Red</option>
+                        <option value=3>Orange</option>
+                        <option value=4>Yellow</option>
+                        <option value=5>Green</option>
+                        <option value=6>Blue</option>
+                        <option value=7>Violet</option>
+                        <option value=8>Grey</option>
+                        <option value=9>White</option>
+                        <!-- <option value=10>Gold</option>
+                        <option value=11>Silver</option>  -->
+                    </select>
+                </div>
+
+                <div>
+                    <!--Select Tag and option for the first band-->
+                    <label>Select Tolerance</label> <br>
+                    <select id="select-one" onchange="change_color1(this);">
+                        <option>Tolerance band</option>
+                        <option value=10>Gold</option>
+                        <option value=11>Silver</option>  
+                    </select>
+                </div>
+
+
+
+
+
+                    <!--<a href="#/Colour">Black</a>
                     <a href="#/Colour">Brown</a>
                     <a href="#/Colour">Red</a>
                     <a href="#/Colour">Orenge</a>
@@ -47,10 +141,10 @@
                     <a href="#/Colour">Blue</a>
                     <a href="#/Colour">Violet</a>
                     <a href="#/Colour">Grey</a>
-                    <a href="#/Colour">White</a>
-                </div>
+                    <a href="#/Colour">White</a>-->
+               <!--</div>--> 
 
-                <button>Second band</button>
+                <!--<button>Second band</button>
                 <button>Third band</button>
                 <button>Fourth band</button>
                     <a href="#/Colour">Gold</a>
@@ -60,11 +154,13 @@
                     <a href="#/Colour">Silver</a>
                 <button>Sixth band</button>
                     <a href="#/Colour">Gold</a>
-                    <a href="#/Colour">Silver</a>
+                    <a href="#/Colour">Silver</a>-->
             
         </div>
+        <br>
         <div class="answer-area">
-            <p> Calculate</p>
+           <!--<p> Calculate</p>-->
+            <button onclick="myFunction()">Calculate</button>
             <p class="answer"> Calculated value<span id="answer"> 0 </span></p>
         </div>
     </div>
