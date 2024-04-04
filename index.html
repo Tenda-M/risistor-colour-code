@@ -24,9 +24,9 @@
         <div class="control-area">
             <!--Set radio buttons of 4/5/6 band, default selected is 4-->
             <div class="pick-band">
-                <input type="radio" id="4-band-button" name="grp" checked onchange="check()" >Four band
-                <input type="radio" id="5-band-button" >Five band
-                <input type="radio" id="6-band-button" >Six band
+                <input type="radio" id="4-band-button" name="radio-button" checked onchange="check()">Four band
+                <input type="radio" id="5-band-button" name="radio-button" onchange="check()">Five band
+                <input type="radio" id="6-band-button" name="radio-button" onchange="check()">Six band
                 
                 <!--<button class="4-band-button">Four band</button>
                 <i class=" fas fa-four"></i>
@@ -41,8 +41,8 @@
                 <div class="dropdown__band hide">-->
                 <div>
                     <!--Select Tag and option for the first band-->
-                    <label>Select First Band</label> <br>
-                    <select id="select-one" onchange="change_color1(this);">
+                    <label >Select First Band:</label> <br>
+                    <select id="select-one" >
                         <option>Colour band</option>
                         <option value=0>Black</option>
                         <option value=1>Brown</option>
@@ -61,8 +61,8 @@
 
                 <div>
                     <!--Select Tag and option for the first band-->
-                    <label>Select Second Band</label> <br>
-                    <select id="select-two" onchange="change_color1(this);">
+                    <label>Select Second Band:</label> <br>
+                    <select id="select-two">
                         <option>Colour band</option>
                         <option value=0>Black</option>
                         <option value=1>Brown</option>
@@ -81,8 +81,8 @@
 
                 <div>
                     <!--Select Tag and option for the first band-->
-                    <label>Select Third Band</label> <br>
-                    <select id="select-one" onchange="change_color1(this);">
+                    <label >Select Third Band:</label> <br>
+                    <select id="select-three" hidden>
                         <option>Colour band</option>
                         <option value=0>Black</option>
                         <option value=1>Brown</option>
@@ -100,8 +100,27 @@
                 </div>
                 <div>
                     <!--Select Tag and option for the first band-->
-                    <label>Select 4th Band (multipler)</label> <br>
-                    <select id="select-one" onchange="change_color1(this);">
+                    <label ></label>Select Fourth Band:</label> <br>
+                    <select id="select-four" hidden>
+                        <option>Colour band</option>
+                        <option value=0>Black</option>
+                        <option value=1>Brown</option>
+                        <option value=2>Red</option>
+                        <option value=3>Orange</option>
+                        <option value=4>Yellow</option>
+                        <option value=5>Green</option>
+                        <option value=6>Blue</option>
+                        <option value=7>Violet</option>
+                        <option value=8>Grey</option>
+                        <option value=9>White</option>
+                        <!-- <option value=10>Gold</option>
+                        <option value=11>Silver</option>  -->
+                    </select>
+                </div>
+                <div>
+                    <!--Select Tag and option for the first band-->
+                    <label>Select Fifth Band (multipler):</label> <br>
+                    <select id="select-five">
                         <option>Colour band</option>
                         <option value=0>Black</option>
                         <option value=1>Brown</option>
@@ -120,8 +139,8 @@
 
                 <div>
                     <!--Select Tag and option for the first band-->
-                    <label>Select Tolerance</label> <br>
-                    <select id="select-one" onchange="change_color1(this);">
+                    <label>Select Tolerance:</label> <br>
+                    <select id="select-tolerance">
                         <option>Tolerance band</option>
                         <option value=10>Gold</option>
                         <option value=11>Silver</option>  

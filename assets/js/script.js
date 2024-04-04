@@ -16,3 +16,21 @@ dropdownBand.classList.add("hide");
 }
 }); */
 
+// to check a variable is of function
+function check(){
+    // if 4-band-button radio button is checked
+    if(document.getElementById("4-band-button").checked){
+    document.getElementById("select-three").hidden = true; 
+    document.getElementById("select-four").hidden = true;
+    }
+     // if 5-band-button radio button is checked
+    if(document.getElementById("5-band-button").checked == true){
+    document.getElementById("select-three").hidden = false;
+    document.getElementById("select-four").hidden = true;
+    }
+     // if 6-band-button radio button is checked
+    if(document.getElementById("6-band-button").checked){
+    document.getElementById("select-three").hidden=false;
+    document.getElementById("select-four").hidden=false; }
+}
+
