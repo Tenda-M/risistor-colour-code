@@ -45,15 +45,15 @@
                     <select id="select-one" >
                         <option>Colour band</option>
                         <option value=0>Black</option>
-                        <option value=1>Brown</option>
-                        <option value=2>Red</option>
-                        <option value=3>Orange</option>
-                        <option value=4>Yellow</option>
-                        <option value=5>Green</option>
-                        <option value=6>Blue</option>
-                        <option value=7>Violet</option>
-                        <option value=8>Grey</option>
-                        <option value=9>White</option>
+                        <option value=10>Brown</option>
+                        <option value=20>Red</option>
+                        <option value=30>Orange</option>
+                        <option value=40>Yellow</option>
+                        <option value=50>Green</option>
+                        <option value=60>Blue</option>
+                        <option value=70>Violet</option>
+                        <option value=80>Grey</option>
+                        <option value=90>White</option>
                         <!-- <option value=10>Gold</option>
                         <option value=11>Silver</option>  -->
                     </select>
@@ -122,16 +122,16 @@
                     <label>Select Fifth Band (multipler):</label> <br>
                     <select id="select-five">
                         <option>Colour band</option>
-                        <option value=0>Black</option>
-                        <option value=1>Brown</option>
-                        <option value=2>Red</option>
-                        <option value=3>Orange</option>
-                        <option value=4>Yellow</option>
-                        <option value=5>Green</option>
-                        <option value=6>Blue</option>
-                        <option value=7>Violet</option>
-                        <option value=8>Grey</option>
-                        <option value=9>White</option>
+                        <option value=1>Black</option>
+                        <option value=10>Brown</option>
+                        <option value=100>Red</option>
+                        <option value=1000>Orange</option>
+                        <option value=10000>Yellow</option>
+                        <option value=100000>Green</option>
+                        <option value=1000000>Blue</option>
+                        <option value=10000000>Violet</option>
+                        <option value=100000000>Grey</option>
+                        <option value=1000000000>White</option>
                         <!-- <option value=10>Gold</option>
                         <option value=11>Silver</option>  -->
                     </select>
@@ -174,13 +174,14 @@
                 <button>Sixth band</button>
                     <a href="#/Colour">Gold</a>
                     <a href="#/Colour">Silver</a>-->
-            
         </div>
+
         <br>
+
         <div class="answer-area">
            <!--<p> Calculate</p>-->
-            <button onclick="myFunction()">Calculate</button>
-            <p class="answer"> Calculated value<span id="answer"> 0 </span></p>
+            <button id="calculateButton" onclick="showCalculatedAnswer()">Calculate</button>
+            <p id="result"> Calculated value</p>
         </div>
     </div>
 
