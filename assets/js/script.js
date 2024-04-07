@@ -13,7 +13,13 @@ function calculateAnswer() {
   // Formula for the bands selection
   if (document.getElementById("4-band-button").checked == true){
     Result = (parseInt(selectOne) + parseInt(selectTwo)) * parseInt(selectFive);
+  } 
+  if (document.getElementById("5-band-button").checked == true){
+    Result = (parseInt(selectOne) + parseInt(selectTwo) + parseInt(selectThree)) * parseInt(selectFive);
   }
+  if (document.getElementById("6-band-button").checked == true){
+    Result = (parseInt(selectOne) + parseInt(selectTwo) + parseInt(selectThree) + parseInt(selectFour)) * parseInt(selectFive);
+  }  
 }
 
 // Function to display the calculated answer
