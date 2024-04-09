@@ -1,6 +1,8 @@
 // Declare a global variable to store the result
 let Result = 0;
 let Tolerance = 0;
+let Minimum = 0;
+let Maximum = 0;
 
 // Function to check the radio button and show/hide select elements accordingly
 function check(){
@@ -46,13 +48,21 @@ function calculateAnswer() {
 function calculateTolerance(){
   if (document.getElementById("select-tolerance").value === "Gold"){
     Tolerance = Result * 0.05;
+    Minimum = Result - Tolerance;
+    Maximum = Result + Tolerance;
   } 
   else if (document.getElementById("select-tolerance").value === "Silver"){
     Tolerance = Result * 0.1;
+    Minimum = Result - Tolerance;
+    Maximum = Result + Tolerance;
   }
+   
   else{
     Tolerance = 0; // Default value if no tolerance is selected
+    Minimum = Result;
+    Maximum = Result;
   }
+ 
 }
 
 // Function to display the calculated answer
@@ -65,6 +75,8 @@ function showCalculatedAnswer() {
   // Call the calculateTolerance function to calculate the tolerance
   calculateTolerance();
   document.getElementById("tolerance").innerText = "The calculated tolerance is +/- : " + Tolerance + "Ohms";
+  document.getElementById("minimum").innerText = "The minimum  resistor is : " + Minimum + "Ohms";
+  document.getElementById("maximum").innerText = "The maximum resistor is : " + Maximum + "Ohms";
 }
 
 /// Page popup
