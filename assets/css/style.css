@@ -2,13 +2,58 @@
 body {
     font-family: sans-serif;
 }
-/* style the drop down button */
+/***********************************************************************/
+/* Pop up window*/
+.popup{
+    position:absolute;
+    border: 1px solid grey;
+    background-color: burlywood;
+    max-width: 500px;
+    padding: 10px;
+    z-index:41;
+    bottom: 30%;
+    left: 30%;
+
+    /*
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust the alpha value to control transparency 
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    z-index: 9999; /* Ensure the popup appears on top of other elements 
+    display: none; /* Hide the popup by default 
+    */
+    
+}
+
+.popup h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.popup p {
+    margin-bottom: 0;
+}
+#instructions {
+    list-style-type: upper-roman;
+}
+
+#close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor:pointer;
+}
+
+
+
+/* style the drop down button 
 .dropdown__band{
    border: 1px solid #eee; 
    width: 100px;
 }
 
-/* seslect band button drop down hyperling*/
+/* seslect band button drop down hyperling
 .dropdown__band a{
     display: block;
     padding: 4px 10px;
@@ -19,22 +64,22 @@ body {
     background: #eeeeee;
   }
 
-/* the drop down button */
+/* the drop down button 
 .dropdown__button{
     background-color:wheat;
     border: none;
     padding: auto;
     width: 100px;
     border-radius: 5px;
-    cursor: pointer; /* to have a selection of a finger pointer*/
+    cursor: pointer; /* to have a selection of a finger pointer
 }
 
-/* to hide the drop down*/
+/* to hide the drop down
 .hide{
     display: none;
 }
 
-/*drop down icon*/
+/*drop down icon
 .dropdown__button, i{
     padding: 4px 4px;
-}
+}*/

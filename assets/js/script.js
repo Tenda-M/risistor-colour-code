@@ -23,14 +23,14 @@ function check(){
 
 // Function to perform the calculation
 function calculateAnswer() {
-  // Get the selected values of the bands
+  // declare local variable for the selected values of the bands
   let selectOne = document.getElementById('select-one').value;
   let selectTwo = document.getElementById('select-two').value;
   let selectThree = document.getElementById('select-three').value;
   let selectFour = document.getElementById('select-four').value;
   let selectFive = document.getElementById('select-five').value;
 
-  // Formula for the bands selection,// Converts numbers to strings and concatenates them
+  // Formula for All the bands selection,// Converts numbers to strings and concatenates them
   if (document.getElementById("4-band-button").checked == true){
     Result = (parseInt(selectOne).toString() + parseInt(selectTwo).toString()) * parseInt(selectFive);
   } 
@@ -42,6 +42,7 @@ function calculateAnswer() {
   }  
 }
 
+// tolerance calculations
 function calculateTolerance(){
   if (document.getElementById("select-tolerance").value === "Gold"){
     Tolerance = Result * 0.05;
@@ -66,4 +67,15 @@ function showCalculatedAnswer() {
   document.getElementById("tolerance").innerText = "The calculated tolerance is +/- : " + Tolerance + "Ohms";
 }
 
-
+/// Page popup
+window.addEventListener("load", function() //This ensures that the popup window opens automatically when the page finishes loading.
+{
+  setTimeout(function open(event)//Inside the setTimeout() function, the popup window is set to display after a delay of 1000 milliseconds (1 second).
+  {
+      document.querySelector(".popup").style.display = "block";
+  }, 1000);
+});
+//function adds an event listener to the close button. When the close button is clicked, it hides the popup window by setting its display property to "none".
+  document.querySelector("#close").addEventListener("click", function(){
+  document.querySelector(".popup").style.display = "none";
+});
