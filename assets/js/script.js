@@ -77,23 +77,19 @@ function showCalculatedAnswer() {
   document.getElementById("tolerance").innerText = "The calculated tolerance is +/- : " + Tolerance + "Ohms";
   document.getElementById("minimum").innerText = "The minimum  resistor is : " + Minimum + "Ohms";
   document.getElementById("maximum").innerText = "The maximum resistor is : " + Maximum + "Ohms";
+
 }
 
 /// Page popup
-//window.addEventListener("load", function() //This ensures that the popup window opens automatically when the page finishes loading.
-//{
-//  setTimeout(function open(event)//Inside the setTimeout() function, the popup window is set to display after a delay of 1000 milliseconds (1 second).
-  //{
-  //    document.querySelector(".popup").style.display = "block";
- // }, 1000);
-//});
-
 // an event listener to the element that will trigger the popup
- document.getElementById("popupTrigger").addEventListener("click", function() {
-  document.querySelector(".popup").style.display = "block";
+document.querySelector(".popup").style.display = "none";
+document.getElementById("popupTrigger").addEventListener("click", function() {
+document.querySelector(".popup").style.display = "block";
 });
+
 
 //function adds an event listener to the close button. When the close button is clicked, it hides the popup window by setting its display property to "none".
   document.querySelector("#close").addEventListener("click", function(){
   document.querySelector(".popup").style.display = "none";
-});
+})
+

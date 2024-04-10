@@ -38,15 +38,15 @@ body {
     z-index:41;
     bottom: 30%;
     left: 30%;
-
+    box-shadow: 0px 0px 50px 1px #000;
+}
+    
     .control-area{
         margin-left: 10px;
         background-color: antiquewhite;
     }
 
    
-}
-
 .popup h2 {
     margin-top: 0;
     text-align: center;
