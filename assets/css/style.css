@@ -1,6 +1,31 @@
-/* Give to body font to use*/
+/* Give to body design*/
 body {
     font-family: sans-serif;
+    background-color: white;
+    text-align: center;
+    color: #445361;
+}
+.band-select{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 20px;
+    justify-content: center;
+    
+}
+#select-one{
+    margin: 0 25px 0 25px;
+}
+
+#select-two{
+    margin: 0 25px 0 25px;
+}
+
+#select-three{
+    margin: 0 25px 0 25px;
+}
+
+#select-four{
+    margin: 0 25px 0 25px;
 }
 /***********************************************************************/
 /* Pop up window*/
@@ -14,16 +39,12 @@ body {
     bottom: 30%;
     left: 30%;
 
-    /*
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust the alpha value to control transparency 
-    padding: 20px;
-    max-width: 400px;
-    width: 90%;
-    z-index: 9999; /* Ensure the popup appears on top of other elements 
-    display: none; /* Hide the popup by default 
-    */
-    
+    .control-area{
+        margin-left: 10px;
+        background-color: antiquewhite;
+    }
+
+   
 }
 
 .popup h2 {
