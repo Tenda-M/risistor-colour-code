@@ -5,48 +5,75 @@ body {
     text-align: center;
     color: #445361;
 }
-.band-select{
+
+.band-select {
     display: flex;
     flex-wrap: nowrap;
     padding: 20px;
     justify-content: center;
-    
+
 }
-#select-one{
+
+#select-one {
     margin: 0 25px 0 25px;
 }
 
-#select-two{
+#select-two {
     margin: 0 25px 0 25px;
 }
 
-#select-three{
+#select-three {
     margin: 0 25px 0 25px;
 }
 
-#select-four{
+#select-four {
     margin: 0 25px 0 25px;
 }
+
 /***********************************************************************/
 /* Pop up window*/
-.popup{
-    position:absolute;
+.popup {
+    position: absolute;
     border: 1px solid grey;
     background-color: burlywood;
     max-width: 500px;
     padding: 10px;
-    z-index:41;
+    z-index: 41;
     bottom: 30%;
     left: 30%;
     box-shadow: 0px 0px 50px 1px #000;
 }
-    
-    .control-area{
-        margin-left: 10px;
-        background-color: antiquewhite;
-    }
 
-   
+
+/* Style for the resistor image */
+.resistor {
+    width: 200px;
+    /* Adjust the width of the resistor */
+    height: 100px;
+    /* Adjust the height of the resistor */
+    background-color: #f5f5f5;
+    /* Default background color */
+    position: relative;
+    margin-top: 20px;
+    /* Adjust the margin as needed */
+}
+
+/* Style for the bands */
+.band {
+    position: absolute;
+    height: 100%;
+    width: calc(100% / 4);
+    /* Divide by the number of bands */
+    border-right: 2px solid #000;
+    /* Black border between bands */
+}
+
+.control-area {
+    margin-left: 10px;
+    background-color: antiquewhite;
+}
+
+
 .popup h2 {
     margin-top: 0;
     text-align: center;
@@ -55,6 +82,7 @@ body {
 .popup p {
     margin-bottom: 0;
 }
+
 #instructions {
     list-style-type: upper-roman;
 }
@@ -63,9 +91,46 @@ body {
     position: absolute;
     top: 5px;
     right: 10px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
+/*Resistor colour image */
+.band-black {
+    background-color: black;
+}
+.band-brown {
+    background-color: brown;
+}
+.band-red {
+    background-color:red;
+}
+.band-orange {
+    background-color:orange;
+}
+.band-yellow {
+    background-color:yellow;
+}
+.band-green {
+    background-color:green;
+}
+.band-blue {
+    background-color:blue;
+}
+.band-violet {
+    background-color:violet;
+}
+.band-grey {
+    background-color: grey;
+}
+.band-white {
+    background-color:white;
+}
+.band-gold {
+    background-color: gold;
+}
+.band-silver {
+    background-color: silver;
+}
 
 
 /* style the drop down button 

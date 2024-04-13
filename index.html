@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Font awsome and google fonts-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
 
     <!--Connecting styling sheets-->>
@@ -17,37 +17,49 @@
 </head>
 
 <body>
-    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
     <h1 class="Heading">
         <img class="logo" src="assets/images/logo.png" alt="logo"> Resistor Colour Code calculator
     </h1>
     <div class="calculator-area">
         <!--Page popup -->
         <button id="popupTrigger">Instructions</button>
-    <div class="popup"> 
-        <button id="close"> &times;</button>
-        <h2> Welcome to Resistor Colour Code calculator</h2>
-        <p>
-            Our online resistor colour code calculator is quite straightforward. Here's a general guide on how to use one this application:
+        <div class="popup">
+            <button id="close"> &times;</button>
+            <h2> Welcome to Resistor Colour Code calculator</h2>
+            <p>
+                Our online resistor colour code calculator is quite straightforward. Here's a general guide on how to
+                use one this application:
             <ol id="instructions">
-                
+
                 <li>Select Resistor number band: Select desired band between 3-band, 4-band and 5-band. </li>
-                    <li>Input Resistor Colour band: Select dropdown menus where you can select the colours of the bands on your resistor. The number of bands may vary, but most resistors have either three, four or five bands. Enter the colours of each band from left to right. Each colour represents a specific digit or value.</li>
-                        <li>Check Tolerance Band (Optional): If your resistor has a tolerance band (usually the last band), select its colour as well. The tolerance band indicates how much the resistor's actual value can deviate from its nominal value.</li>
-                            <li>Click Calculate: Once you've entered all the colours, the calculator will display the resistance value of the resistor based on the colours you provided and tolerance. This value is shown in ohms (Ω)</li>
-                            <br>
-                            By following these steps, you should be able to effectively use our online resistor colour code calculator to determine the resistance value of a resistor. Enjoy!
-            </ol>  
-        </p>
-    </div>
-        
+                <li>Input Resistor Colour band: Select dropdown menus where you can select the colours of the bands on
+                    your resistor. The number of bands may vary, but most resistors have either three, four or five
+                    bands. Enter the colours of each band from left to right. Each colour represents a specific digit or
+                    value.</li>
+                <li>Check Tolerance Band (Optional): If your resistor has a tolerance band (usually the last band),
+                    select its colour as well. The tolerance band indicates how much the resistor's actual value can
+                    deviate from its nominal value.</li>
+                <li>Click Calculate: Once you've entered all the colours, the calculator will display the resistance
+                    value of the resistor based on the colours you provided and tolerance. This value is shown in ohms
+                    (Ω)</li>
+                <br>
+                By following these steps, you should be able to effectively use our online resistor colour code
+                calculator to determine the resistance value of a resistor. Enjoy!
+            </ol>
+            </p>
+
+        </div>
+
         <div class="control-area">
             <!--Set radio buttons of 4/5/6 band, default selected is 4-->
             <div class="pick-band">
                 <input type="radio" id="4-band-button" name="radio-button" checked onchange="check()">Four band
                 <input type="radio" id="5-band-button" name="radio-button" onchange="check()">Five band
                 <input type="radio" id="6-band-button" name="radio-button" onchange="check()">Six band
-                
+
                 <!--<button class="4-band-button">Four band</button>
                 <i class=" fas fa-four"></i>
                 <button class="5-band-button">Five band</button>
@@ -61,8 +73,8 @@
                 <div class="dropdown__band hide">-->
                 <div>
                     <!--Select Tag and option for the first band-->
-                    <label >Select First Band:</label> <br>
-                    <select id="select-one" >
+                    <label>Select First Band:</label> <br>
+                    <select id="select-one" onchange="updateResistorImage()">
                         <option>Colour band</option>
                         <option value=0>Black</option>
                         <option value=1>Brown</option>
@@ -82,7 +94,7 @@
                 <div>
                     <!--Select Tag and option for the first band-->
                     <label>Select Second Band:</label> <br>
-                    <select id="select-two">
+                    <select id="select-two" onchange="updateResistorImage()">
                         <option>Colour band</option>
                         <option value=0>Black</option>
                         <option value=1>Brown</option>
@@ -101,8 +113,8 @@
 
                 <div>
                     <!--Select Tag and option for the first band-->
-                    <label >Select Third Band:</label> <br>
-                    <select id="select-three" hidden>
+                    <label>Select Third Band:</label> <br>
+                    <select id="select-three" hidden onchange="updateResistorImage()">
                         <option>Colour band</option>
                         <option value=0>Black</option>
                         <option value=1>Brown</option>
@@ -120,8 +132,8 @@
                 </div>
                 <div>
                     <!--Select Tag and option for the first band-->
-                    <label ></label>Select Fourth Band:</label> <br>
-                    <select id="select-four" hidden>
+                    <label></label>Select Fourth Band:</label> <br>
+                    <select id="select-four" hidden onchange="updateResistorImage()">
                         <option>Colour band</option>
                         <option value=0>Black</option>
                         <option value=1>Brown</option>
@@ -140,7 +152,7 @@
                 <div>
                     <!--Select Tag and option for the first band-->
                     <label>Select Fifth Band (multipler):</label> <br>
-                    <select id="select-five">
+                    <select id="select-five" onchange="updateResistorImage()">
                         <option>Colour band</option>
                         <option value=1>Black</option>
                         <option value=10>Brown</option>
@@ -152,36 +164,42 @@
                         <option value=10000000>Violet</option>
                         <option value=100000000>Grey</option>
                         <option value=1000000000>White</option>
-                        <!-- <option value=10>Gold</option>
-                        <option value=11>Silver</option>  -->
                     </select>
-                </div>
 
-                <div>
-                    <!--Select Tag and option for the first band-->
-                    <label>Select Tolerance:</label> <br>
-                    <select id="select-tolerance">
-                        <option>Tolerance band</option>
-                        <option value=Gold>Gold</option>
-                        <option value=Silver>Silver</option>  
-                    </select>
+                    <div>
+                        <!--Select Tag and option for the first band-->
+                        <label>Select Tolerance:</label> <br>
+                        <select id="select-tolerance" onchange="updateResistorImage()">
+                            <option>Tolerance band</option>
+                            <option value=Gold>Gold</option>
+                            <option value=Silver>Silver</option>
+                        </select>
+                    </div>
                 </div>
+                
+            </div>
+            <!-- Resistor colour image -->
+            <div class="resistor" id="resistor">
+                <div class="band" id="band1"></div>
+                <div class="band" id="band2"></div>
+                <div class="band" id="band3"></div>
+                <div class="band" id="band4"></div>
+                <div class="band" id="band5"></div>
+            </div>
+            <br>
+
+            <div class="answer-area">
+                <!--<p> Calculate</p>-->
+                <button id="calculateButton" onclick="showCalculatedAnswer()">Calculate</button>
+                <p id="result"> Calculated value</p>
+                <p id="tolerance"> Tolerance value</p>
+                <p id="minimum"> Calculated Minimum value</p>
+                <p id="maximum"> Tolerance Maximum alue</p>
+            </div>
         </div>
 
-        <br>
 
-        <div class="answer-area">
-           <!--<p> Calculate</p>-->
-            <button id="calculateButton" onclick="showCalculatedAnswer()">Calculate</button>
-            <p id="result"> Calculated value</p>
-            <p id="tolerance"> Tolerance value</p>
-            <p id="minimum"> Calculated Minimum value</p>
-            <p id="maximum"> Tolerance Maximum alue</p>
-        </div>
-    </div>
-
-
-    <script src="assets/js/script.js"></script>
+        <script src="assets/js/script.js"></script>
 
 </body>
 
