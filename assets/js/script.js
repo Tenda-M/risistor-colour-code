@@ -62,7 +62,6 @@ function calculateTolerance() {
     Minimum = Result;
     Maximum = Result;
   }
-
 }
 
 // Function to display the calculated answer
@@ -80,7 +79,7 @@ function showCalculatedAnswer() {
 
 }
 
-//******* Page popup box **********
+//**************** Page popup box ******************
 // an event listener to the element that will trigger the popup
 document.querySelector(".popup").style.display = "none";
 document.getElementById("popupTrigger").addEventListener("click", function () {
@@ -97,6 +96,144 @@ document.querySelector("#close").addEventListener("click", function () {
   document.querySelector(".popup").style.display = "none";
 })
 
-//Resistor image
+//******************** Resistor image *******************
+// Function to update the resistor image
+function updateResistorImage() {
+  // Get the selected colors from the dropdown menus
+  let color1 = document.getElementById('select-one').options[document.getElementById('select-one').selectedIndex].dataset.color;
+  let color2 = document.getElementById('select-two').options[document.getElementById('select-two').selectedIndex].dataset.color;
+  let color3 = document.getElementById('select-three').options[document.getElementById('select-three').selectedIndex].dataset.color;
+  let color4 = document.getElementById('select-four').options[document.getElementById('select-four').selectedIndex].dataset.color;
+  let color5 = document.getElementById('select-five').options[document.getElementById('select-five').selectedIndex].dataset.color;
+//By using the data-color attribute in the HTML to store the color names separately from the numerical values used for calculation, 
+//you can ensure that the functionality for both calculating the resistor value and displaying the resistor image works correctly.
+
+  // Map colors to their corresponding CSS classes
+  let colorClasses = {
+      'black': 'band-black',
+      'brown': 'band-brown',
+      'red': 'band-red',
+      'orange': 'band-orange',
+      'yellow': 'band-yellow',
+      'green': 'band-green',
+      'blue': 'band-blue',
+      'violet': 'band-violet',
+      'grey': 'band-grey',
+      'white': 'band-white',
+      'gold': 'band-gold',
+      'silver': 'band-silver'
+  };
+
+  // Set the background color of each band based on the selected color
+  document.getElementById('band1').className = 'band ' + colorClasses[color1];
+  document.getElementById('band2').className = 'band ' + colorClasses[color2];
+  if (color3 !== undefined && color3 !== '') {
+      document.getElementById('band3').className = 'band ' + colorClasses[color3];
+  }
+  if (color4 !== undefined && color4 !== '') {
+      document.getElementById('band4').className = 'band ' + colorClasses[color4];
+  }
+  document.getElementById('band5').className = 'band ' + colorClasses[color5];
+}
+
+/*
+//Script to update resistor image 
+// Function to update the resistor image
+  function updateResistorImage() {
+    
+    // Get the selected colors from the dropdown menus
+    let selectOne = document.getElementById('select-one');
+    let selectTwo = document.getElementById('select-two');
+    let selectThree = document.getElementById('select-three');
+    let selectFour = document.getElementById('select-four');
+    let selectFive = document.getElementById('select-five');
+
+    let color1 = selectOne.options[selectOne.selectedIndex].dataset.color.toLowerCase();
+    let color2 = selectTwo.options[selectTwo.selectedIndex].dataset.color.toLowerCase();
+    let color3 = selectThree.options[selectThree.selectedIndex].dataset.color.toLowerCase();
+    let color4 = selectFour.options[selectFour.selectedIndex].dataset.color.toLowerCase();
+    let color5 = selectFive.options[selectFive.selectedIndex].dataset.color.toLowerCase();
+//By using the data-color attribute in the HTML to store the color names separately from the numerical values used for calculation, 
+//you can ensure that the functionality for both calculating the resistor value and displaying the resistor image works correctly.
+
+console.log("Color 1:", color1);
+console.log("Color 2:", color2);
+console.log("Color 3:", color3);
+console.log("Color 4:", color4);
+console.log("Color 5:", color5);
 
 
+  //console.log("Selected Colors:", color1, color2, color3, color4, color5);
+
+  // Map colors to their corresponding CSS classes
+  let colorClasses = {
+    'black': 'band-black',
+    'brown': 'band-brown',
+    'red': 'band-red',
+    'orange': 'band-orange',
+    'yellow': 'band-yellow',
+    'green': 'band-green',
+    'blue': 'band-blue',
+    'violet': 'band-violet',
+    'grey': 'band-grey',
+    'white': 'band-white',
+    'gold': 'band-gold',
+    'silver': 'band-silver'
+  };
+
+   document.getElementById('band1').className = 'band ' + colorClasses[color1];
+    document.getElementById('band2').className = 'band ' + colorClasses[color2];
+    document.getElementById('band3').className = 'band ' + colorClasses[color3];
+    document.getElementById('band4').className = 'band ' + colorClasses[color4];
+    document.getElementById('band5').className = 'band ' + colorClasses[color5];
+/*
+  // Set the background color of each band based on the selected color
+  document.getElementById('band1').className = 'band ' + colorClasses[color1];
+  document.getElementById('band2').className = 'band ' + colorClasses[color2];
+  
+  // Check if the third band is selected
+  if (color3 !== 'colour band') {
+    document.getElementById('band3').className = 'band ' + colorClasses[color3];
+  } else {
+    // If not selected, reset the band color and show it
+    document.getElementById('band3').className = 'band';
+    document.getElementById('band3').style.display = 'block';
+  }
+  // Check if the fourth band is selected
+  if (color4 !== 'colour band') {
+    document.getElementById('band4').className = 'band ' + colorClasses[color4];
+  } else {
+    // If not selected, reset the band color and show it
+    document.getElementById('band4').className = 'band';
+    document.getElementById('band4').style.display = 'block';
+  }
+  // Set the background color of the fifth band (multiplier)
+  document.getElementById('band5').className = 'band ' + colorClasses[color5];*/
+//}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+ 
+  /*/ Set the background color of each band based on the selected color
+  document.getElementById('band1').classList = 'band ' + colorClasses[color1];
+  document.getElementById('band2').classList = 'band ' + colorClasses[color2];
+  document.getElementById('band3').classList = 'band ' + colorClasses[color3];
+  document.getElementById('band4').classList = 'band ' + colorClasses[color4];
+  document.getElementById('band5').classList = 'band ' + colorClasses[color5];
+  }*/
+
+  /*
+  // Set the background color of each band based on the selected color
+  document.getElementById('band1').classList = 'band ' + colorClasses[color1];
+  document.getElementById('band2').classList = 'band ' + colorClasses[color2];
+  // if color3 and color4 are not empty strings before assigning them to the corresponding resistor bands. 
+  //This ensures that only the selected colors are applied to the visible bands, and any hidden bands remain unchanged.
+  if (color3 !== '') {
+      document.getElementById('band3').classList = 'band ' + colorClasses[color3];
+  }
+  if (color4 !== '') {
+      document.getElementById('band4').classList = 'band ' + colorClasses[color4];
+  }
+  document.getElementById('band5').classList = 'band ' + colorClasses[color5];
+}*/
