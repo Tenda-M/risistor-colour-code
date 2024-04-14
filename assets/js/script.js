@@ -105,6 +105,7 @@ function updateResistorImage() {
   let color3 = document.getElementById('select-three').options[document.getElementById('select-three').selectedIndex].dataset.color;
   let color4 = document.getElementById('select-four').options[document.getElementById('select-four').selectedIndex].dataset.color;
   let color5 = document.getElementById('select-five').options[document.getElementById('select-five').selectedIndex].dataset.color;
+  let color6 = document.getElementById('select-tolerance').value.toLowerCase();
 //By using the data-color attribute in the HTML to store the color names separately from the numerical values used for calculation, 
 //you can ensure that the functionality for both calculating the resistor value and displaying the resistor image works correctly.
 
@@ -134,6 +135,7 @@ function updateResistorImage() {
       document.getElementById('band4').className = 'band ' + colorClasses[color4];
   }
   document.getElementById('band5').className = 'band ' + colorClasses[color5];
+  document.getElementById('band6').className = 'band ' + colorClasses[color6];
 }
 
 /*

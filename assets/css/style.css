@@ -14,25 +14,41 @@ body {
     padding: 5px;
 }
 
-.band-select div {
-    flex-basis: calc(20% - 10px); /* Set width of each select element */
-    margin: 5px; /* Add margin to create space between select elements */
-}
 
-/* setting side on colour bands on the resistor*/
+/* Style for the resistor image */
 .resistor {
     display: flex; /* Use flexbox layout */
     justify-content: space-between; /* Distribute items evenly */
-    width: 80%; /* Set width to 80% of the container */
+    width: 30%; /* Set width to 80% of the container */
     margin: 0 auto; /* Center the resistor horizontally */
+    background-color: burlywood;
 }
-
 .band {
     display: inline-block; /* Display the color bands inline */
-    width: 20px; /* Set the width of each color band */
+   
     height: 100px; /* Set the height of each color band */
-    margin: 0 5px; /* Add margin between color bands */
+    
 }
+#band1, #band2, #band3, #band4 {
+    width: 20px; /* Set the width of each color band */
+    margin: 0 1px; /* Add margin between color bands */
+    margin-right: 2px; /* Add margin between color bands */
+    margin-left: 10px; /* Expand the fifth band to take up more space */
+}
+
+#band5 {
+    width: 20px; /* Set the width of each color band */
+    margin: 0 2px; /* Add margin between color bands */
+    margin-left: 50px; /* Add larger margin after the third band */
+}
+#band6 {
+    width: 20px; /* Set the width of each color band */
+    margin: 0 2px; /* Add margin between color bands */
+    margin-right: 20px; /* Add larger margin after the third band */
+}
+
+
+
 /*.band-select {
     display: flex;
     flex-wrap: nowrap;
@@ -40,22 +56,31 @@ body {
     justify-content: center;
 
 }*/
-
+/**** Select band drop down *******/
 #select-one {
-    margin: 0 25px 0 25px;
+    margin: 0 15px 0 15px;
 }
 
 #select-two {
-    margin: 0 25px 0 25px;
+    margin: 0 15px 0 15px;
 }
 
 #select-three {
-    margin: 0 25px 0 25px;
+    margin: 0 15px 0 15px;
 }
 
 #select-four {
-    margin: 0 25px 0 25px;
+    margin: 0 15px 0 15px;
 }
+
+#select-five {
+    margin: 0 15px 0 15px;
+}
+
+#select-tolerance {
+    margin: 0 15px 0 15px;
+}
+
 
 /***********************************************************************/
 /* Pop up window*/
@@ -73,28 +98,28 @@ body {
 
 
 /* Style for the resistor image */
-.resistor {
+/*.resistor {
     width: 200px;
-    /* Adjust the width of the resistor */
+    /* Adjust the width of the resistor 
     height: 100px;
-    /* Adjust the height of the resistor */
+    /* Adjust the height of the resistor 
     background-color: #e4af4d;
-    /* Default background color */
+    /* Default background color 
     position: relative;
     margin-top: 20px;
     margin-left: 600px;
-    /* Adjust the margin as needed */
-}
+    /* Adjust the margin as needed 
+}*/
 
 /* Style for the bands */
-.band {
+/*.band {
     position: absolute;
     height: 100%;
     width: calc(100% / 5);
-    /* Divide by the number of bands */
+    /* Divide by the number of bands 
     border-right: 2px solid #000000;
-    /* Black border between bands */
-}
+    /* Black border between bands 
+}*/
 
 .control-area {
     margin-left: 10px;
