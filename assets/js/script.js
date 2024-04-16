@@ -6,22 +6,53 @@ let Maximum = 0;
 
 // Function to check the radio button and show/hide select elements accordingly
 function check() {
+  console.log("Checking radio buttons...");
   // if 4-band-button radio button is checked
   if (document.getElementById("4-band-button").checked) {
+    console.log("4-band button is checked.");
     document.getElementById("select-three").hidden = true;
+    document.getElementById("third-band-label").hidden = true;
     document.getElementById("select-four").hidden = true;
+    document.getElementById("fourth-band-label").hidden = true;
+    
   }
   // if 5-band-button radio button is checked
-  if (document.getElementById("5-band-button").checked == true) {
+  else if (document.getElementById("5-band-button").checked) {
+    console.log("5-band button is checked.");
     document.getElementById("select-three").hidden = false;
+    document.getElementById("third-band-label").hidden = false;
     document.getElementById("select-four").hidden = true;
+    document.getElementById("fourth-band-label").hidden = true;
   }
   // if 6-band-button radio button is checked
-  if (document.getElementById("6-band-button").checked) {
+  else if (document.getElementById("6-band-button").checked) {
+    console.log("6-band button is checked.");
     document.getElementById("select-three").hidden = false;
+    document.getElementById("third-band-label").hidden = false;
     document.getElementById("select-four").hidden = false;
+    document.getElementById("fourth-band-label").hidden = false;
+  }
+ // adjustLayout();
+}
+/*
+// Function to adjust the layout based on the visibility of bands 3 and 4
+function adjustLayout() {
+  let bandSelect = document.querySelector('.band-select');
+  if (document.getElementById("4-band-button").checked) {
+    bandSelect.style.width = '100%'; // Reduce width when both bands are hidden
+    bandSelect.style.justifyContent = 'center'; // Center align items when both bands are hidden
+  } 
+ else if (document.getElementById("5-band-button").checked) {
+  bandSelect.style.width = '100%'; // Reduce width when both bands are hidden
+  bandSelect.style.justifyContent = 'center'; // Center align items when both bands are hidden
+}else {
+    bandSelect.style.width = '80%'; // Default width when bands are visible
+    bandSelect.style.justifyContent = 'center'; // Center align items when both bands are hidden
   }
 }
+*/
+
+
 
 // Function to perform the calculation
 function calculateAnswer() {
@@ -138,104 +169,4 @@ function updateResistorImage() {
   document.getElementById('band6').className = 'band ' + colorClasses[color6];
 }
 
-/*
-//Script to update resistor image 
-// Function to update the resistor image
-  function updateResistorImage() {
-    
-    // Get the selected colors from the dropdown menus
-    let selectOne = document.getElementById('select-one');
-    let selectTwo = document.getElementById('select-two');
-    let selectThree = document.getElementById('select-three');
-    let selectFour = document.getElementById('select-four');
-    let selectFive = document.getElementById('select-five');
 
-    let color1 = selectOne.options[selectOne.selectedIndex].dataset.color.toLowerCase();
-    let color2 = selectTwo.options[selectTwo.selectedIndex].dataset.color.toLowerCase();
-    let color3 = selectThree.options[selectThree.selectedIndex].dataset.color.toLowerCase();
-    let color4 = selectFour.options[selectFour.selectedIndex].dataset.color.toLowerCase();
-    let color5 = selectFive.options[selectFive.selectedIndex].dataset.color.toLowerCase();
-//By using the data-color attribute in the HTML to store the color names separately from the numerical values used for calculation, 
-//you can ensure that the functionality for both calculating the resistor value and displaying the resistor image works correctly.
-
-console.log("Color 1:", color1);
-console.log("Color 2:", color2);
-console.log("Color 3:", color3);
-console.log("Color 4:", color4);
-console.log("Color 5:", color5);
-
-
-  //console.log("Selected Colors:", color1, color2, color3, color4, color5);
-
-  // Map colors to their corresponding CSS classes
-  let colorClasses = {
-    'black': 'band-black',
-    'brown': 'band-brown',
-    'red': 'band-red',
-    'orange': 'band-orange',
-    'yellow': 'band-yellow',
-    'green': 'band-green',
-    'blue': 'band-blue',
-    'violet': 'band-violet',
-    'grey': 'band-grey',
-    'white': 'band-white',
-    'gold': 'band-gold',
-    'silver': 'band-silver'
-  };
-
-   document.getElementById('band1').className = 'band ' + colorClasses[color1];
-    document.getElementById('band2').className = 'band ' + colorClasses[color2];
-    document.getElementById('band3').className = 'band ' + colorClasses[color3];
-    document.getElementById('band4').className = 'band ' + colorClasses[color4];
-    document.getElementById('band5').className = 'band ' + colorClasses[color5];
-/*
-  // Set the background color of each band based on the selected color
-  document.getElementById('band1').className = 'band ' + colorClasses[color1];
-  document.getElementById('band2').className = 'band ' + colorClasses[color2];
-  
-  // Check if the third band is selected
-  if (color3 !== 'colour band') {
-    document.getElementById('band3').className = 'band ' + colorClasses[color3];
-  } else {
-    // If not selected, reset the band color and show it
-    document.getElementById('band3').className = 'band';
-    document.getElementById('band3').style.display = 'block';
-  }
-  // Check if the fourth band is selected
-  if (color4 !== 'colour band') {
-    document.getElementById('band4').className = 'band ' + colorClasses[color4];
-  } else {
-    // If not selected, reset the band color and show it
-    document.getElementById('band4').className = 'band';
-    document.getElementById('band4').style.display = 'block';
-  }
-  // Set the background color of the fifth band (multiplier)
-  document.getElementById('band5').className = 'band ' + colorClasses[color5];*/
-//}
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////
-
- 
-  /*/ Set the background color of each band based on the selected color
-  document.getElementById('band1').classList = 'band ' + colorClasses[color1];
-  document.getElementById('band2').classList = 'band ' + colorClasses[color2];
-  document.getElementById('band3').classList = 'band ' + colorClasses[color3];
-  document.getElementById('band4').classList = 'band ' + colorClasses[color4];
-  document.getElementById('band5').classList = 'band ' + colorClasses[color5];
-  }*/
-
-  /*
-  // Set the background color of each band based on the selected color
-  document.getElementById('band1').classList = 'band ' + colorClasses[color1];
-  document.getElementById('band2').classList = 'band ' + colorClasses[color2];
-  // if color3 and color4 are not empty strings before assigning them to the corresponding resistor bands. 
-  //This ensures that only the selected colors are applied to the visible bands, and any hidden bands remain unchanged.
-  if (color3 !== '') {
-      document.getElementById('band3').classList = 'band ' + colorClasses[color3];
-  }
-  if (color4 !== '') {
-      document.getElementById('band4').classList = 'band ' + colorClasses[color4];
-  }
-  document.getElementById('band5').classList = 'band ' + colorClasses[color5];
-}*/

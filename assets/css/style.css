@@ -5,41 +5,54 @@ body {
     text-align: center;
     color: #445361;
 }
+
 /* Band select div styling */
 .band-select {
     display: flex; /* Use flexbox to arrange items */
-    justify-content: space-around; /* Distribute items evenly with space around them */
+    justify-content: space-between;/* Distribute items evenly with space between them */
     align-items: center; /* Align items vertically in the center */
     padding: 5px;
+    flex-direction: row; /* Default to row layout */
 }
+
 /* each div inside the band-select div*/
-.band-select > div {
-    flex: 1; /* Each div will take up equal space */
+.band-select>div {
+    /*flex-basis: 20%;  Each div will take up 20% of the available space */
     margin: 0 1px; /* Add margin between divs */
 }
+/* Adjust the width when elements are hidden */
+#select-three[hidden], #third-band-label[hidden],
+#select-four[hidden], #fourth-band-label[hidden] {
+    display: none;
+}
 
-
-/* Style for the resistor image */
+/******* Style for the resistor image *******/
 .resistor {
-    display: flex; /* Use flexbox layout */
-    justify-content: space-between; /* Distribute items evenly */
-    width: 30%; /* Set width to 80% of the container */
-    margin: 0 auto; /* Center the resistor horizontally */
+    display: flex;
+    /* Use flexbox layout */
+    justify-content: space-between;
+    /* Distribute items evenly */
+    width: 30%;
+    /* Set width to 80% of the container */
+    margin: 0 auto;
+    /* Center the resistor horizontally */
     background-color: burlywood;
 }
+/* each band size of resistor colour*/
 .band {
     display: inline-block; /* Display the color bands inline */
-   
     height: 100px; /* Set the height of each color band */
-    
-}
-#band1, #band2, #band3, #band4 {
-    width: 20px; /* Set the width of each color band */
-    margin: 0 1px; /* Add margin between color bands */
-    margin-right: 2px; /* Add margin between color bands */
-    margin-left: 10px; /* Expand the fifth band to take up more space */
 }
 
+#band1, #band2, #band3, #band4 {
+    width: 20px; /* Set the width of each color band */
+    margin: 0 1px;
+    /* Add margin between color bands */
+    margin-right: 2px;
+    /* Add margin between color bands */
+    margin-left: 10px;
+    /* Expand the fifth band to take up more space */
+}
 #band5 {
     width: 20px; /* Set the width of each color band */
     margin: 0 2px; /* Add margin between color bands */
@@ -51,43 +64,8 @@ body {
     margin-right: 20px; /* Add larger margin after the third band */
 }
 
-
-
-/*.band-select {
-    display: flex;
-    flex-wrap: nowrap;
-    padding: 20px;
-    justify-content: center;
-
-}*/
-/**** Select band drop down *****
-#select-one {
-    margin: 0 15px 0 15px;
-}
-
-#select-two {
-    margin: 0 15px 0 15px;
-}
-
-#select-three {
-    margin: 0 15px 0 15px;
-}
-
-#select-four {
-    margin: 0 15px 0 15px;
-}
-
-#select-five {
-    margin: 0 15px 0 15px;
-}
-
-#select-tolerance {
-    margin: 0 15px 0 15px;
-}
-**/
-
 /***********************************************************************/
-/* Pop up window*/
+/* Pop up window
 .popup {
     position: absolute;
     border: 1px solid grey;
@@ -98,7 +76,10 @@ body {
     bottom: 30%;
     left: 30%;
     box-shadow: 0px 0px 50px 1px #000;
-}
+}*/
+
+
+
 /* calculation Area*/
 .calculator-area {
     margin-left: 10px;
@@ -132,68 +113,96 @@ body {
 .band-black {
     background-color: black;
 }
+
 .band-brown {
     background-color: brown;
 }
+
 .band-red {
-    background-color:red;
+    background-color: red;
 }
+
 .band-orange {
-    background-color:orange;
+    background-color: orange;
 }
+
 .band-yellow {
-    background-color:yellow;
+    background-color: yellow;
 }
+
 .band-green {
-    background-color:green;
+    background-color: green;
 }
+
 .band-blue {
-    background-color:blue;
+    background-color: blue;
 }
+
 .band-violet {
-    background-color:violet;
+    background-color: violet;
 }
+
 .band-grey {
     background-color: grey;
 }
+
 .band-white {
-    background-color:white;
+    background-color: white;
 }
+
 .band-gold {
     background-color: gold;
 }
+
 .band-silver {
     background-color: silver;
 }
 
-/*******bottons colour*/
-#red{
-   background: red;
-}
-
-/* Media query: tablets and lower (768px and down) */
-@media screen and (max-width: 768px) {
-	
 /* Style for the resistor image */
-.resistor {
-    display: flex; /* Use flexbox layout */
-    justify-content: space-between; /* Distribute items evenly */
-    width: 60%; /* Set width to 80% of the container */
-    margin: 0 auto; /* Center the resistor horizontally */
-    background-color: burlywood;
-}
-}
-
 /* Media query: tablets and lower (768px and down) */
 @media screen and (max-width: 768px) {
-	/* Band-select div styling */
+    .resistor {
+        display: flex;
+        /* Use flexbox layout */
+        justify-content: space-between;
+        /* Distribute items evenly */
+        width: 70%;
+        /* Set width to 80% of the container */
+        margin: 0 auto;
+        /* Center the resistor horizontally */
+        background-color: burlywood;
+    }
+}
+
+/* Band-select div styling */
+/* Media query: tablets and lower (768px and down) */
+@media screen and (max-width: 768px) {
     .band-select {
         flex-direction: column; /* Arrange items vertically */
-        align-items: flex-start; /* Align items to the start of the container */
         align-items: center; /* Align items vertically in the center */
     }
-     /*divs inside the band-select div*/
+
+    /*divs inside the band-select div*/
     .band-select > div {
-        margin: 10px 0; /* Add margin between divs */
+        flex: 1; /* Each div will take up equal space */
+        margin: 10px 0;/* Add margin between divs */
     }
+}
+
+/* Pop up window*/
+/* Media query: tablets and lower (768px and down) */
+@media screen and (max-width: 768px) {
+.popup {
+    position: absolute;
+    border: 1px solid grey;
+    background-color: burlywood;
+    max-width: 275px;
+    padding: 15px;
+    z-index: 41;
+    bottom: 5%;/*margin*/
+    top: 5%;
+    left: 10%;
+    right: 10%;
+    box-shadow: 0px 0px 50px 1px #000;
+}
 }
