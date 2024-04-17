@@ -1,9 +1,9 @@
+
 // Declare a global variable to store the result
 let Result = 0;
 let Tolerance = 0;
 let Minimum = 0;
 let Maximum = 0;
-
 // Function to check the radio button and show/hide select elements accordingly
 function check() {
   console.log("Checking radio buttons...");
@@ -32,25 +32,11 @@ function check() {
     document.getElementById("select-four").hidden = false;
     document.getElementById("fourth-band-label").hidden = false;
   }
-  adjustLayout();
+ 
 }
 
-// Function to adjust the layout based on the visibility of bands 3 and 4
-function adjustLayout() {
-  let bandSelect = document.querySelector('.band-select');
 
-  if (document.getElementById("4-band-button").checked==true) {
-    //bandSelect.style.width = '60%'; // Reduce width when both bands are hidden
-    bandSelect.style.justifyContent = 'center'; // Center align items when both bands are hidden
-  } 
- else if (document.getElementById("5-band-button").checked) {
-  //bandSelect.style.width = '100%'; // Reduce width when both bands are hidden
-  bandSelect.style.justifyContent = 'center'; // Center align items when both bands are hidden
-}else {
-    //bandSelect.style.width = '80%'; // Default width when bands are visible
-    bandSelect.style.justifyContent = 'center'; // Center align items when both bands are hidden
-  }
-}
+
 
 // Function to perform the calculation
 function calculateAnswer() {
@@ -166,5 +152,7 @@ function updateResistorImage() {
   document.getElementById('band5').className = 'band ' + colorClasses[color5];
   document.getElementById('band6').className = 'band ' + colorClasses[color6];
 }
+
+
 
 

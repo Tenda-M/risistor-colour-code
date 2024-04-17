@@ -58,17 +58,18 @@
             <div class="pick-band">
                 <input type="radio" id="4-band-button" name="radio-button" checked onchange="check()">Four band
                 <input type="radio" id="5-band-button" name="radio-button" onchange="check()">Five band
-                <input type="radio" id="6-band-button" name="radio-button" onchange="check()">Six band
+                <input type="radio" id="6-band-button" name="radio-button" onchange="check()">Six ban
+
             </div>
             <br>
-            <div class="band-select">
+            <div class="band-select" id="band-select">
                 <!--<button class="dropdown__button">First band<i class="fa fa-chevron-circle-down"></i></button>
                 <div class="dropdown__band hide">-->
                 <div>
                     <!--Select Tag and option for the first band-->
                     <label>Select First Band:</label> <br>
                     <select id="select-one" onchange="updateResistorImage()">
-                        <option value="colour band">Colour band</option>
+                        <option value="colour band" selected>Colour band</option>
                         <!-- Add value to be used for resistor calculation and data-color attribute with the color name -->
                         <option value=0 data-color="black">Black</option>
                         <option value=1 data-color="brown">Brown</option>
@@ -88,8 +89,8 @@
                 <div>
                     <!--Select Tag and option for the second band-->
                     <label>Select Second Band:</label> <br>
-                    <select id="select-two" onchange="updateResistorImage()">
-                        <option>Colour band</option>
+                    <select id="select-two" onchange="updateResistorImage()" >
+                        <option value="colour band" selected>Colour band</option>
                         <option value=0 data-color="black">Black</option>
                         <option value=1 data-color="brown">Brown</option>
                         <option value=2 data-color="red">Red</option>
@@ -109,7 +110,7 @@
                     <!--Select Tag and option for the third band-->
                     <label id="third-band-label" hidden>Select Third Band:</label> <br>
                     <select id="select-three" onchange="updateResistorImage()" hidden>
-                        <option>Colour band</option>
+                        <option value="colour band" selected>Colour band</option>
                         <option value=0 data-color="black">Black</option>
                         <option value=1 data-color="brown">Brown</option>
                         <option value=2 data-color="red">Red</option>
@@ -128,7 +129,7 @@
                     <!--Select Tag and option for the fourth band-->
                     <label id="fourth-band-label" hidden>Select Fourth Band:</label> <br>
                     <select id="select-four" onchange="updateResistorImage()" hidden>
-                        <option>Colour band</option>
+                        <option value="colour band" selected>Colour band</option>
                         <option value=0 data-color="black">Black</option>
                         <option value=1 data-color="brown">Brown</option>
                         <option value=2 data-color="red">Red</option>
@@ -147,7 +148,7 @@
                     <!--Select Tag and option for the fifth band-->
                     <label>Select Fifth Band (multipler):</label> <br>
                     <select id="select-five" onchange="updateResistorImage()">
-                        <option>Colour band</option>
+                        <option value="colour band" selected>Colour band</option>
                         <option value=1 data-color="black">Black</option>
                         <option value=10 data-color="brown">Brown</option>
                         <option value=100 data-color="red">Red</option>
