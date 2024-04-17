@@ -8,23 +8,16 @@ body {
 
 /* Band select div styling */
 .band-select {
-    display: flex; /* Use flexbox to arrange items */
-    justify-content: space-between;/* Distribute items evenly with space between them */
-    align-items: center; /* Align items vertically in the center */
-    padding-bottom: 25px;
-    flex-direction: row; /* Default to row layout */
-
+    display: flex;/* Use flexbox to arrange items */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures elements wrap if they exceed the container width */
 }
 
-/* each div inside the band-select div*/
-.band-select>div {
-    margin: 0 20px; /* Add margin between divs */
+/*Add margin to each child element for spacing */
+.band-select > div {
+    margin: 15px; /* Adjust as needed */
 }
-/* Adjust the width when elements are hidden 
-#select-three[hidden], #third-band-label[hidden],
-#select-four[hidden], #fourth-band-label[hidden] {
-    display: none;
-}*/
 
 /******* Style for the resistor image *******/
 .resistor {

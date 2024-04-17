@@ -4,41 +4,42 @@ let Result = 0;
 let Tolerance = 0;
 let Minimum = 0;
 let Maximum = 0;
-// Function to check the radio button and show/hide select elements accordingly
+
+// ***************** Function to check the radio button and show/hide select elements accordingly *****************/
 function check() {
-  console.log("Checking radio buttons...");
+
+  //let bandSelect = document.getElementById("band-select");
+
+  // Get the select container for the third band
+  let selectThreeContainer = document.getElementById("band-three");
+  let selectFourContainer = document.getElementById("band-four");
+  
+
   // if 4-band-button radio button is checked
   if (document.getElementById("4-band-button").checked) {
-    console.log("4-band button is checked.");
-    document.getElementById("select-three").hidden = true;
-    document.getElementById("third-band-label").hidden = true;
-    document.getElementById("select-four").hidden = true;
-    document.getElementById("fourth-band-label").hidden = true;
-    
+      // Hide select element for third band
+      selectThreeContainer.style.display = "none";
+      selectFourContainer.style.display = "none";
+      // Reduce width and center align items when both bands are hidden
+         //bandSelect.style.width = '10%';
+         //bandSelect.style.justifyContent = 'center';
   }
   // if 5-band-button radio button is checked
   else if (document.getElementById("5-band-button").checked) {
-    console.log("5-band button is checked.");
-    document.getElementById("select-three").hidden = false;
-    document.getElementById("third-band-label").hidden = false;
-    document.getElementById("select-four").hidden = true;
-    document.getElementById("fourth-band-label").hidden = true;
+      // Show select element for third band
+      selectThreeContainer.style.display = "block";
+      selectFourContainer.style.display = "none";
   }
   // if 6-band-button radio button is checked
   else if (document.getElementById("6-band-button").checked) {
-    console.log("6-band button is checked.");
-    document.getElementById("select-three").hidden = false;
-    document.getElementById("third-band-label").hidden = false;
-    document.getElementById("select-four").hidden = false;
-    document.getElementById("fourth-band-label").hidden = false;
+      // Show select element for third band
+      selectThreeContainer.style.display = "block";
+      selectFourContainer.style.display = "block";
   }
- 
 }
 
 
-
-
-// Function to perform the calculation
+// ************************ Function to perform the calculation **************************//
 function calculateAnswer() {
   // declare local variable for the selected values of the bands
   let selectOne = document.getElementById('select-one').value;
@@ -94,7 +95,7 @@ function showCalculatedAnswer() {
 
 }
 
-//**************** Page popup box ******************
+//**************** Page popup box ******************//
 // an event listener to the element that will trigger the popup
 document.querySelector(".popup").style.display = "none";
 document.getElementById("popupTrigger").addEventListener("click", function () {
@@ -111,7 +112,7 @@ document.querySelector("#close").addEventListener("click", function () {
   document.querySelector(".popup").style.display = "none";
 })
 
-//******************** Resistor image *******************
+//******************** Resistor image *******************//
 // Function to update the resistor image
 function updateResistorImage() {
   // Get the selected colors from the dropdown menus

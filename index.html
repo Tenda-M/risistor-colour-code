@@ -58,7 +58,7 @@
             <div class="pick-band">
                 <input type="radio" id="4-band-button" name="radio-button" checked onchange="check()">Four band
                 <input type="radio" id="5-band-button" name="radio-button" onchange="check()">Five band
-                <input type="radio" id="6-band-button" name="radio-button" onchange="check()">Six ban
+                <input type="radio" id="6-band-button" name="radio-button" onchange="check()">Six band
 
             </div>
             <br>
@@ -106,10 +106,19 @@
                     </select>
                 </div>
 
-                <div>
-                    <!--Select Tag and option for the third band-->
-                    <label id="third-band-label" hidden>Select Third Band:</label> <br>
+                <!--<div id="band-three" style="display:none;">
+                    <!-Select Tag and option for the third band
+                    <label>Select Third Band:</label> <br>
                     <select id="select-three" onchange="updateResistorImage()" hidden>
+                        <!- options here 
+                    </select>
+                </div>-->
+                
+
+                <div id="band-three" style="display:none;">
+                    <!--Select Tag and option for the third band-->
+                    <label>Select Third Band:</label> <br>
+                    <select id="select-three" onchange="updateResistorImage()" >
                         <option value="colour band" selected>Colour band</option>
                         <option value=0 data-color="black">Black</option>
                         <option value=1 data-color="brown">Brown</option>
@@ -125,10 +134,10 @@
                         <option value=11>Silver</option>  -->
                     </select>
                 </div>
-                <div>
+                <div id="band-four" style="display: none;">
                     <!--Select Tag and option for the fourth band-->
-                    <label id="fourth-band-label" hidden>Select Fourth Band:</label> <br>
-                    <select id="select-four" onchange="updateResistorImage()" hidden>
+                    <label >Select Fourth Band:</label> <br>
+                    <select id="select-four" onchange="updateResistorImage()" >
                         <option value="colour band" selected>Colour band</option>
                         <option value=0 data-color="black">Black</option>
                         <option value=1 data-color="brown">Brown</option>
