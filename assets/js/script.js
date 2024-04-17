@@ -13,31 +13,36 @@ function check() {
   // Get the select container for the third band
   let selectThreeContainer = document.getElementById("band-three");
   let selectFourContainer = document.getElementById("band-four");
-  
+
 
   // if 4-band-button radio button is checked
   if (document.getElementById("4-band-button").checked) {
-      // Hide select element for third band
-      selectThreeContainer.style.display = "none";
-      selectFourContainer.style.display = "none";
-      // Reduce width and center align items when both bands are hidden
-         //bandSelect.style.width = '10%';
-         //bandSelect.style.justifyContent = 'center';
+    // Hide select element for third band
+    selectThreeContainer.style.display = "none";
+    selectFourContainer.style.display = "none";
+    // Remove the "required" attribute from select-three and select-four
+    document.getElementById("select-three").removeAttribute("required");
+    document.getElementById("select-four").removeAttribute("required");
   }
   // if 5-band-button radio button is checked
   else if (document.getElementById("5-band-button").checked) {
-      // Show select element for third band
-      selectThreeContainer.style.display = "block";
-      selectFourContainer.style.display = "none";
+    // Show select element for third band
+    selectThreeContainer.style.display = "block";
+    selectFourContainer.style.display = "none";
+    // Add the "required" attribute to select-three and remove it from select-four
+    document.getElementById("select-three").setAttribute("required", true);
+    document.getElementById("select-four").removeAttribute("required");
   }
   // if 6-band-button radio button is checked
   else if (document.getElementById("6-band-button").checked) {
-      // Show select element for third band
-      selectThreeContainer.style.display = "block";
-      selectFourContainer.style.display = "block";
+    // Show select element for third band
+    selectThreeContainer.style.display = "block";
+    selectFourContainer.style.display = "block";
+    // Add the "required" attribute to both select-three and select-four
+    document.getElementById("select-three").setAttribute("required", true);
+    document.getElementById("select-four").setAttribute("required", true);
   }
 }
-
 
 // ************************ Function to perform the calculation **************************//
 function calculateAnswer() {
@@ -79,9 +84,8 @@ function calculateTolerance() {
     Maximum = Result;
   }
 }
-
 // Function to display the calculated answer
-function showCalculatedAnswer() {
+/*function showCalculatedAnswer() {
   // Call the calculateAnswer function to perform the calculation
   calculateAnswer();
   // Display the result
@@ -93,7 +97,41 @@ function showCalculatedAnswer() {
   document.getElementById("minimum").innerText = "The minimum  resistor is : " + Minimum + "Ohms";
   document.getElementById("maximum").innerText = "The maximum resistor is : " + Maximum + "Ohms";
 
+}*/
+
+
+function showCalculatedAnswer() {
+  // Check if all dropdowns have been selected
+  if (validateDropdowns()) {
+    // Call the calculateAnswer function to perform the calculation
+    calculateAnswer();
+    // Display the result
+    document.getElementById("result").innerText = " The calculated result is: " + Result + " Ohms";
+
+    // Call the calculateTolerance function to calculate the tolerance
+    calculateTolerance();
+    document.getElementById("tolerance").innerText = "The calculated tolerance is +/- : " + Tolerance + "Ohms";
+    document.getElementById("minimum").innerText = "The minimum resistor is : " + Minimum + "Ohms";
+    document.getElementById("maximum").innerText = "The maximum resistor is : " + Maximum + "Ohms";
+  } else {
+    // If dropdowns are not all selected, display an alert or handle the error as desired
+    alert("Please select values from all dropdown menus before calculating.");
+  }
 }
+
+function validateDropdowns() {
+  // Get all dropdowns
+  let dropdowns = document.querySelectorAll("select");
+  // Iterate through each dropdown to check if any are still at their default value
+  for (let dropdown of dropdowns) {
+    if (dropdown.value === "colour band") {
+      return false; // If any dropdown is at its default value, return false
+    }
+  }
+  return true; // If all dropdowns have been selected, return true
+}
+
+///////
 
 //**************** Page popup box ******************//
 // an event listener to the element that will trigger the popup
@@ -122,33 +160,33 @@ function updateResistorImage() {
   let color4 = document.getElementById('select-four').options[document.getElementById('select-four').selectedIndex].dataset.color;
   let color5 = document.getElementById('select-five').options[document.getElementById('select-five').selectedIndex].dataset.color;
   let color6 = document.getElementById('select-tolerance').value.toLowerCase();
-//By using the data-color attribute in the HTML to store the color names separately from the numerical values used for calculation, 
-//you can ensure that the functionality for both calculating the resistor value and displaying the resistor image works correctly.
+  //By using the data-color attribute in the HTML to store the color names separately from the numerical values used for calculation, 
+  //you can ensure that the functionality for both calculating the resistor value and displaying the resistor image works correctly.
 
   // Map colors to their corresponding CSS classes
   let colorClasses = {
-      'black': 'band-black',
-      'brown': 'band-brown',
-      'red': 'band-red',
-      'orange': 'band-orange',
-      'yellow': 'band-yellow',
-      'green': 'band-green',
-      'blue': 'band-blue',
-      'violet': 'band-violet',
-      'grey': 'band-grey',
-      'white': 'band-white',
-      'gold': 'band-gold',
-      'silver': 'band-silver'
+    'black': 'band-black',
+    'brown': 'band-brown',
+    'red': 'band-red',
+    'orange': 'band-orange',
+    'yellow': 'band-yellow',
+    'green': 'band-green',
+    'blue': 'band-blue',
+    'violet': 'band-violet',
+    'grey': 'band-grey',
+    'white': 'band-white',
+    'gold': 'band-gold',
+    'silver': 'band-silver'
   };
 
   // Set the background color of each band based on the selected color
   document.getElementById('band1').className = 'band ' + colorClasses[color1];
   document.getElementById('band2').className = 'band ' + colorClasses[color2];
   if (color3 !== undefined && color3 !== '') {
-      document.getElementById('band3').className = 'band ' + colorClasses[color3];
+    document.getElementById('band3').className = 'band ' + colorClasses[color3];
   }
   if (color4 !== undefined && color4 !== '') {
-      document.getElementById('band4').className = 'band ' + colorClasses[color4];
+    document.getElementById('band4').className = 'band ' + colorClasses[color4];
   }
   document.getElementById('band5').className = 'band ' + colorClasses[color5];
   document.getElementById('band6').className = 'band ' + colorClasses[color6];
