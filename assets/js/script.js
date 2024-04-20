@@ -6,41 +6,91 @@ let Minimum = 0;
 let Maximum = 0;
 
 // ***************** Function to check the radio button and show/hide select elements accordingly *****************/
-function check() {
-
-  //let bandSelect = document.getElementById("band-select");
+/*function check() {
 
   // Get the select container for the third band
   let selectThreeContainer = document.getElementById("band-three");
   let selectFourContainer = document.getElementById("band-four");
 
+  console.log("Checking band settings...");
 
   // if 4-band-button radio button is checked
   if (document.getElementById("4-band-button").checked) {
+    console.log("Setting for 4-band...");
     // Hide select element for third band
     selectThreeContainer.style.display = "none";
     selectFourContainer.style.display = "none";
     // Remove the "required" attribute from select-three and select-four
     document.getElementById("select-three").removeAttribute("required");
     document.getElementById("select-four").removeAttribute("required");
+    console.log("4-band: select-three and select-four have removed required.");
+  
+    // Hide select element for third band
+    selectThreeContainer.classList.add("hidden");
+// Hide select element for fourth band
+   selectFourContainer.classList.add("hidden");
+console.log("4-band: select-three and select-four are hidden ");
   }
+
   // if 5-band-button radio button is checked
   else if (document.getElementById("5-band-button").checked) {
+    console.log("Setting for 5-band...");
     // Show select element for third band
     selectThreeContainer.style.display = "block";
     selectFourContainer.style.display = "none";
     // Add the "required" attribute to select-three and remove it from select-four
     document.getElementById("select-three").setAttribute("required", true);
     document.getElementById("select-four").removeAttribute("required");
+    console.log("5-band: select-three is visible add required while select-four is remove required");
+
+     // Hide select element for third band
+     selectThreeContainer.classList.remove("hidden");
+     // Hide select element for fourth band
+     selectFourContainer.classList.add("hidden");
+     console.log("4-band: select-three removed hidden and select-four is hidden ");
   }
   // if 6-band-button radio button is checked
   else if (document.getElementById("6-band-button").checked) {
+    console.log("Setting for 6-band...");
     // Show select element for third band
     selectThreeContainer.style.display = "block";
     selectFourContainer.style.display = "block";
     // Add the "required" attribute to both select-three and select-four
     document.getElementById("select-three").setAttribute("required", true);
     document.getElementById("select-four").setAttribute("required", true);
+    console.log("5-band: select-three is visible add required; select-four is hidden and add required");
+  }
+}*/
+
+function check() {
+  const selectThreeContainer = document.getElementById("band-three");
+  const selectFourContainer = document.getElementById("band-four");
+
+  console.log("Checking band settings...");
+
+  // Hide both third and fourth selectors initially
+  selectThreeContainer.style.display = "none";
+  selectFourContainer.style.display = "none";
+  document.getElementById("select-three").removeAttribute("required");
+  document.getElementById("select-four").removeAttribute("required");
+
+  // Check which band is selected and adjust visibility and requirements
+  if (document.getElementById("4-band-button").checked) {
+    console.log("Setting for 4-band...");
+    // Already hidden, just log the action
+    console.log("4-band: Both select-three and select-four are hidden and not required.");
+  } else if (document.getElementById("5-band-button").checked) {
+    console.log("Setting for 5-band...");
+    selectThreeContainer.style.display = "block";
+    document.getElementById("select-three").setAttribute("required", true);
+    console.log("5-band: select-three is visible and required; select-four remains hidden and not required.");
+  } else if (document.getElementById("6-band-button").checked) {
+    console.log("Setting for 6-band...");
+    selectThreeContainer.style.display = "block";
+    selectFourContainer.style.display = "block";
+    document.getElementById("select-three").setAttribute("required", true);
+    document.getElementById("select-four").setAttribute("required", true);
+    console.log("6-band: Both select-three and select-four are visible and required.");
   }
 }
 
@@ -105,6 +155,14 @@ function showCalculatedAnswer() {
   if (validateDropdowns()) {
     // Call the calculateAnswer function to perform the calculation
     calculateAnswer();
+
+     // Logging for debugging
+     console.log("Calculation results:", {
+      Result: Result,
+      Tolerance: Tolerance,
+      Minimum: Minimum,
+      Maximum: Maximum
+    });
     // Display the result
     document.getElementById("result").innerText = " The calculated result is: " + Result + " Ohms";
 
@@ -119,19 +177,27 @@ function showCalculatedAnswer() {
   }
 }
 
+// this function is responsible for checking if all visible dropdowns that have been selected.//
 function validateDropdowns() {
-  // Get all dropdowns
-  let dropdowns = document.querySelectorAll("select");
-  // Iterate through each dropdown to check if any are still at their default value
-  for (let dropdown of dropdowns) {
-    if (dropdown.value === "colour band") {
-      return false; // If any dropdown is at its default value, return false
-    }
-  }
-  return true; // If all dropdowns have been selected, return true
+  let isValid = true;
+  console.log("Validating dropdown selections...");
+
+  document.querySelectorAll("select").forEach(select => {
+      let style = window.getComputedStyle(select);
+      if (style.display !== "none" && select.required) {
+          if (select.value === "colour band") {
+              isValid = false;
+              console.log(`Validation failed on: ${select.id}, Value: ${select.value}`);
+          } else {
+              console.log(`Validation passed on: ${select.id}, Value: ${select.value}`);
+          }
+      } else {
+          console.log(`Skipped validation on: ${select.id}, Display: ${style.display}, Required: ${select.required}`);
+      }
+  });
+  return isValid;
 }
 
-///////
 
 //**************** Page popup box ******************//
 // an event listener to the element that will trigger the popup
