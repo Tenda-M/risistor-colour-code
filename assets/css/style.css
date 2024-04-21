@@ -5,6 +5,94 @@ body {
     text-align: center;
     color: #445361;
 }
+/********** h1 ************/
+h1 {
+    text-align: center; /* Centering the heading */
+    margin-bottom: 20px; /* Spacing between the h1 and the popup */
+}
+
+/**** Main band selection and calculation Area***/
+.calculator-area {
+    margin: auto;
+    background-color: antiquewhite;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/***********************************************************************/
+/* Pop up window*/
+/*.popup {
+    position: absolute;
+    border: 1px solid grey;
+    background-color: burlywood;
+    max-width: 530px;
+    padding: 10px;
+    padding-top: 20px;
+    z-index: 41;
+    bottom: 30%;
+    /*left: 30%;*
+    margin: auto;
+    box-shadow: 0px 0px 50px 1px #000;
+    text-align: justify;
+}
+*/
+
+/* Pop up window */
+.popup {
+    position: fixed;  /* Changed to 'fixed' to stay positioned relative to the viewport */
+    top: 0;           /* Align the top edge of the popup at the top edge of the viewport */
+    left: 0;          /* Align the left edge of the popup at the left edge of the viewport */
+    right: 0;         /* Align the right edge of the popup at the right edge of the viewport */
+    bottom: 0;        /* Align the bottom edge of the popup at the bottom edge of the viewport */
+    margin: auto;     /* Automatically margin to center both vertically and horizontally */
+    width: 50%;       /* Optional: Set the width of the popup */
+    max-width: 530px; /* Maintain a max-width for larger displays */
+    height: 60%;     /* Height can be 60% based on content */
+    border: 1px solid grey;
+    background-color: burlywood;
+    padding: 20px;
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.863);
+    text-align: justify;
+    z-index: 1000;    /* Ensure it is above other content */
+} 
+
+/*.popup {
+    position: absolute; /* Use absolute positioning relative to a positioned ancestor 
+    left: 50%;           /* Center the popup horizontally 
+    transform: translateX(-50%); /* Correctly center the popup 
+    width: 80%;          /* Adjust the width as necessary 
+    max-width: 530px;    /* Ensure maximum width for better layout 
+    margin-top: 20px;    /* Ensure there's a gap between the heading and the popup 
+    padding: 20px;       /* Padding inside the popup 
+    background-color: burlywood; /* Background color of the popup 
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); /* Shadow for depth 
+    z-index: 5;          /* Ensure the popup is above other content but below fixed headers if any 
+}*/
+
+#popupTrigger{
+    margin-bottom: 20px;
+}
+
+/*** Instruction pop-up ***/
+.popup h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.popup p {
+    margin-bottom: 0;
+}
+
+#instructions {
+    list-style-type: upper-roman;  
+}
+
+#close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
 
 /* Band select div styling */
 .band-select {
@@ -57,101 +145,42 @@ body {
     margin-right: 20px; /* Add larger margin after the third band */
 }
 
-/***********************************************************************/
-/* Pop up window*/
-.popup {
-    position: absolute;
-    border: 1px solid grey;
-    background-color: burlywood;
-    max-width: 500px;
-    padding: 10px;
-    z-index: 41;
-    bottom: 30%;
-    left: 30%;
-    box-shadow: 0px 0px 50px 1px #000;
-    text-align: justify;
-}
-
-#popupTrigger{
-    margin-bottom: 20px;
-}
 
 
-/* calculation Area*/
-.calculator-area {
-    margin-left: 10px;
-    background-color: antiquewhite;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-
-.popup h2 {
-    margin-top: 0;
-    text-align: center;
-}
-
-.popup p {
-    margin-bottom: 0;
-}
-
-#instructions {
-    list-style-type: upper-roman;
-    
-}
-
-#close {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    cursor: pointer;
-}
-
-/*Resistor colour image to be used in JS */
+/*Resistor colour image to be used in JS for band colour selection*/
 .band-black {
     background-color: black;
 }
-
 .band-brown {
     background-color: brown;
 }
-
 .band-red {
     background-color: red;
 }
-
 .band-orange {
     background-color: orange;
 }
-
 .band-yellow {
     background-color: yellow;
 }
-
 .band-green {
     background-color: green;
 }
-
 .band-blue {
     background-color: blue;
 }
-
 .band-violet {
     background-color: violet;
 }
-
 .band-grey {
     background-color: grey;
 }
-
 .band-white {
     background-color: white;
 }
-
 .band-gold {
     background-color: gold;
 }
-
 .band-silver {
     background-color: silver;
 }
@@ -174,13 +203,15 @@ body {
 
 /* Band-select div styling */
 /* Media query: tablets and lower (768px and down) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px) {
+    /* Band select div styling */
     .band-select {
         flex-direction: column; /* Arrange items vertically */
         align-items: center; /* Align items vertically in the center */
         justify-content: space-between;/* Distribute items evenly with space between them */
         display: flex; /* Use flexbox to arrange items */
         padding: 5px;
+        flex-wrap: wrap; /* Ensures elements wrap if they exceed the container width */
     }
     /*divs inside the band-select div*/
     .band-select > div {
@@ -193,16 +224,10 @@ body {
 /* Media query: tablets and lower (768px and down) */
 @media screen and (max-width: 768px) {
     .popup {
-        position: absolute;
-        border: 1px solid grey;
-        background-color: burlywood;
-        max-width: 275px;
-        padding: 15px;
-        z-index: 41;
-        bottom: 5%;/*margin*/
-        top: 5%;
-        left: 10%;
-        right: 10%;
-        box-shadow: 0px 0px 50px 1px #000;
+        width: 95%;       /* Wider popup to utilize more screen space */
+        padding: 10px;    /* Slightly reduced padding to save space */
+        padding-top: 20px;
+        max-height: 75vh; /* Max height to avoid taking over the entire screen */
+        overflow-y: auto; /* Enable scrolling if content exceeds the height */
     }
 }
