@@ -16,6 +16,15 @@ A live demo can be found [here.](https://tenda-m.github.io/risistor-colour-code/
    1. [Target Audience](#target-audience)
    2. [User Goals](#user-goals)
    3. [Site Owner Goals](#site-owner-goals)
+2. [User Experience (UX)](#user-experience-ux)
+   1. [User Requirements and Expectations](#user-requirements-and-expectations)
+   2. [User Stories](#user-stories)
+   3. [Features To Achieve These Goals](#features-to-achieve-these-goals)
+3. [Design](#design)
+   1. [Wireframes](#wireframes)
+   2. [Logo](#logo)
+   3. [Colour Scheme](#colour-scheme)
+   4. [Fonts](#fonts)
 * [Languages Used](#languages-used)
 * [User Experience](#user-experience-ux)
 * [Design](#design)
@@ -99,7 +108,26 @@ By fulfilling these objectives, the Resistor Colour Code Tool will serve as a us
 
 ### Features To Achieve These Goals
 
+## Design
 
+Using colours that closely resemble the base colour of a real resistor—a light or neutral colour with coloured bands—will help the calculator simulate the appearance of resistors. Users may find it easier to mentally relate the digital instrument to the physical parts they are accustomed to handling as a result.
+
+### Wireframes
+
+
+
+
+### Logo
+
+
+### Colour Scheme
+
+
+
+### Fonts
+
+
+##########################
  ## User stories
 
 ### First Time Visitor Goals
