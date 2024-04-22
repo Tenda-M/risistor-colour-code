@@ -113,20 +113,32 @@ By fulfilling these objectives, the Resistor Colour Code Tool will serve as a us
 Using colours that closely resemble the base colour of a real resistor—a light or neutral colour with coloured bands—will help the calculator simulate the appearance of resistors. Users may find it easier to mentally relate the digital instrument to the physical parts they are accustomed to handling as a result.
 
 ### Wireframes
+[Wireframe Desktop 4 band](./assets/docs/wireframes/)  
+[Wireframe Desktop 5 band](./assets/docs/wireframes/) 
+[Wireframe Desktop 6 band](./assets/docs/wireframes/) 
 
+[Wireframe Tablet 4 band](./assets/docs/wireframes/)   
+[Wireframe Tablet 5 band](./assets/docs/wireframes/) 
+[Wireframe Tablet 6 band](./assets/docs/wireframes/) 
 
+[Wireframe Mobile 4 band](./assets/docs/wireframes/)   
+[Wireframe Mobile 5 band](./assets/docs/wireframes/) 
+[Wireframe Mobile 6 band](./assets/docs/wireframes/) 
 
 
 ### Logo
-
+The base logo was found on the [Canva](https://www.freepik.com/premium-vector/resistor-logo_35489968.htm) website. 
+![Logo image](./readme/media/logo.png)
 
 ### Colour Scheme
+The palette colour scheme is used for this website are based on the colours of the colour chart shown below.
 
-
+![Colour wheel image](./readme/media/colour-chart.png)
 
 ### Fonts
+   The sans-serif font style was chosen for this website. It is clear and easy to read. [Google fonts: sans-serif](https://fonts.google.com/knowledge/glossary/sans_serif) 
 
-
+![Font style image](./readme/media/font-style.png)
 ##########################
  ## User stories
 
