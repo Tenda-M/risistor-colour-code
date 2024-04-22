@@ -19,25 +19,7 @@ h1 {
     padding-bottom: 20px;
 }
 
-/***********************************************************************/
-/* Pop up window*/
-/*.popup {
-    position: absolute;
-    border: 1px solid grey;
-    background-color: burlywood;
-    max-width: 530px;
-    padding: 10px;
-    padding-top: 20px;
-    z-index: 41;
-    bottom: 30%;
-    /*left: 30%;*
-    margin: auto;
-    box-shadow: 0px 0px 50px 1px #000;
-    text-align: justify;
-}
-*/
-
-/* Pop up window */
+/*** Pop up window *****/
 .popup {
     position: fixed;  /* Changed to 'fixed' to stay positioned relative to the viewport */
     top: 0;           /* Align the top edge of the popup at the top edge of the viewport */
@@ -55,19 +37,6 @@ h1 {
     text-align: justify;
     z-index: 1000;    /* Ensure it is above other content */
 } 
-
-/*.popup {
-    position: absolute; /* Use absolute positioning relative to a positioned ancestor 
-    left: 50%;           /* Center the popup horizontally 
-    transform: translateX(-50%); /* Correctly center the popup 
-    width: 80%;          /* Adjust the width as necessary 
-    max-width: 530px;    /* Ensure maximum width for better layout 
-    margin-top: 20px;    /* Ensure there's a gap between the heading and the popup 
-    padding: 20px;       /* Padding inside the popup 
-    background-color: burlywood; /* Background color of the popup 
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); /* Shadow for depth 
-    z-index: 5;          /* Ensure the popup is above other content but below fixed headers if any 
-}*/
 
 #popupTrigger{
     margin-bottom: 20px;
