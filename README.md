@@ -72,7 +72,33 @@ The objective of this project is to create an interactive resistor colour code t
 * Develop a tool that loads quickly and responds well to increase user satisfaction, particularly in educational contexts where time is often of the essence.
 By fulfilling these objectives, the Resistor Colour Code Tool will serve as a useful tool for rapidly identifying resistors 
 
-# User Experience (UX)
+## User Experience (UX)
+
+### User Requirements and Expectations
+* User interface that is intuitive: Simple, uncomplicated, and easy to use, even for beginners.Each interactive element, including dropdowns for choosing resistor bands, has clear labelling and is visible.
+
+* Accurate Calculations: Based on the chosen colour codes, accurate resistance values are calculated.  Users get immediate response when they choose or alter the colour of the resistor band.
+
+* Wider Band Options: Support for 4-band, 5-band, and 6-band resistors, among other resistor types. Options for choosing multiplier bands and tolerance where appropriate.
+
+* Visual Representation: As users choose the colours, a visual representation of the resistor helps them better understand the locations and meanings of each band. 
+
+* Error Handling: When users pick items that are incompatible or if an input exceeds the expected range, clear messages or alarms should be sent. Correction suggestions to avoid misunderstandings or improper usage of the instrument.
+
+### User Stories
+
+* As user, I want to select resistor bands by color so that I can learn to calculate the resistance values manually.
+
+* As a user, working on electronics projects, I need to visually match the color on my physical resistor with an interactive display so that I can confirm the resistor values before using them in circuits.
+
+* As a user, I want to be able to quickly input multiple resistor color codes and get accurate results so that I can efficiently verify components during my work.
+
+* As a mobile user, I want the tool to be responsive and easy to use on my smartphone or tablet so that I can calculate resistor values on the go.
+
+* As an advanced user, I want to be able to configure settings for tolerance.
+
+### Features To Achieve These Goals
+
 
  ## User stories
 
