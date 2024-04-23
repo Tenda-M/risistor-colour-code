@@ -137,7 +137,6 @@ The palette colour scheme is used for this website are based on the colours of t
 
 ![Font style image](./readme/media/font-style.png)
 
-
 ## Structure
 
 The structure implemented for this project is a single HTML.
@@ -174,7 +173,7 @@ The structure implemented for this project is a single HTML.
 - Visual Studio Code
 - Photoshop
 - Illustrator
-        
+  
 ###########################################
 
 
