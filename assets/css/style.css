@@ -153,7 +153,28 @@ h1 {
 .band-silver {
     background-color: silver;
 }
+/***#########################################################################***/
+/*****************Local storage*******************/
+button-store {
+    padding: 10px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
+button-store:hover {
+    background-color: #45a049;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/***#########################################################################***/
 /* Style for the resistor image */
 /* Media query: tablets and lower (768px and down) */
 @media screen and (max-width: 768px) {

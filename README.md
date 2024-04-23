@@ -25,6 +25,10 @@ A live demo can be found [here.](https://tenda-m.github.io/risistor-colour-code/
    2. [Logo](#logo)
    3. [Colour Scheme](#colour-scheme)
    4. [Fonts](#fonts)
+4. [Structure](#structure)
+   1. [Technologies Used](#technologies-used)
+   2. [Frameworks](#frameworks)
+   3. [Tools](#tools)
 * [Languages Used](#languages-used)
 * [User Experience](#user-experience-ux)
 * [Design](#design)
@@ -40,13 +44,6 @@ A live demo can be found [here.](https://tenda-m.github.io/risistor-colour-code/
 * [Acknowledgements](#acknowledgements)
 
 - - -
-
-# Languages Used
-* HTML5
-* CSS3
-* Java script
-
-- - - 
 
 ## Project Goals
 The objective of this project is to create an interactive resistor colour code tool that will help a variety of users, including professional engineers and electronics students, understand the process of recognising resistor values. 
@@ -139,7 +136,51 @@ The palette colour scheme is used for this website are based on the colours of t
    The sans-serif font style was chosen for this website. It is clear and easy to read. [Google fonts: sans-serif](https://fonts.google.com/knowledge/glossary/sans_serif) 
 
 ![Font style image](./readme/media/font-style.png)
-##########################
+
+
+## Structure
+
+The structure implemented for this project is a single HTML.
+
+* Instructions button: Briefly explains how to use the tool.
+
+* Resistor Color Code Calculator:Band Selection that allows users to choose the number of bands (usually 4, 5, or 6).
+
+* Color Selectors:Dropdown menus or clickable color bands for setting the color of each resistor band.
+  Each dropdown corresponds to a specific attribute of the resistor (e.g., first digit, second digit, multiplier, tolerance).
+
+* Calculate Button: When clicked, computes the resistance based on the selected colors.
+
+* Visual Representation: A graphical display of the resistor with the selected colors.
+
+* Result Display: Shows the calculated resistance and possibly the tolerance in ohms.
+
+
+### Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
+### Frameworks
+
+- [Font Awesome](https://fontawesome.com/icons)
+- [Google Fonts](https://fonts.google.com/)
+- [Favicon](https://fonts.google.com/)
+
+### Tools
+
+- GitHub
+- Visual Studio Code
+- Photoshop
+- Illustrator
+        
+###########################################
+
+
+
+
+
  ## User stories
 
 ### First Time Visitor Goals

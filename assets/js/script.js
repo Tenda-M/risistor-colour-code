@@ -257,7 +257,51 @@ function updateResistorImage() {
   document.getElementById('band5').className = 'band ' + colorClasses[color5];
   document.getElementById('band6').className = 'band ' + colorClasses[color6];
 }
+///********#############################################################********/
+///*****************Local storage*******************//
+
+// Function to save current settings to local storage
+function saveToLocalStorage() {
+  const settings = {
+      bandOne: document.getElementById('select-one').value,
+      bandTwo: document.getElementById('select-two').value,
+      // Include other bands and selections as needed
+      bandThree: document.getElementById('select-three').value,
+      bandFour: document.getElementById('select-four').value,
+      bandFive: document.getElementById('select-five').value,
+      tolerance: document.getElementById('select-tolerance').value
+  };
+  localStorage.setItem('resistorSettings', JSON.stringify(settings));
+  alert("Settings saved!");
+}
+
+// Function to load settings from local storage
+function loadFromLocalStorage() {
+  const settings = JSON.parse(localStorage.getItem('resistorSettings'));
+  if (settings) {
+      document.getElementById('select-one').value = settings.bandOne;
+      document.getElementById('select-two').value = settings.bandTwo;
+      // Set other bands and selections as well
+      document.getElementById('select-three').value = settings.bandThree;
+      document.getElementById('select-four').value = settings.bandFour;
+      document.getElementById('select-five').value = settings.bandFive;
+      document.getElementById('select-tolerance').value = settings.tolerance;
+      updateResistorImage(); // Update the display according to new settings
+      alert("Settings loaded!");
+  } else {
+      alert("No saved settings found.");
+  }
+}
+
+// Function to clear settings from local storage
+function clearLocalStorage() {
+  localStorage.removeItem('resistorSettings');
+  alert("Settings cleared!");
+  // Optionally reset the dropdowns to their default values
+  document.querySelectorAll('select').forEach(select => select.selectedIndex = 0);
+  updateResistorImage(); // Refresh the display to default image
+}
 
 
-
+///********#############################################################********/
 
