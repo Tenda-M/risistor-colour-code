@@ -53,6 +53,10 @@ A live demo can be found [here.](https://tenda-m.github.io/risistor-colour-code/
    2. [Browser Test](#browser-test)
    3. [Features Test](#features-test)
    4. [Testing User Stories](#testing-user-stories)
+10. [Deployment](#deployment)
+    1. [Clone](#clone)
+    2. [Fork](#fork)
+11. [Reference](#reference)
 
 * [Languages Used](#languages-used)
 * [User Experience](#user-experience-ux)
@@ -281,6 +285,7 @@ To check for syntax errors on each page of the project, the W3C Markup Validator
 
 ## Lighthouse
 
+## Testing
 ### Device test
 Tested with Mobile, tablet, laptop and desktop all worked
 
@@ -319,7 +324,7 @@ Google Chrome, Microsoft Edge, Mozilla Firefox
 |   Tested Alert for load confirmation alert                                                                                                                     |        |
 |   Tested Alert for no saved settings alert                                                                                                                     |        |
 |   Tested Alert for clear settings alert                                                                                                                        |        |
-|                                                                                                                                                                |        |
+|   Tested 404 page.                                                                                                                                             |        |
 |                                                                                                                                                                |        |
 |                                                                                                                                                                |        |
 |                                                                                                                                                                |        |
@@ -335,61 +340,90 @@ Google Chrome, Microsoft Edge, Mozilla Firefox
 **1. As a user, I want to choose between 4-band, 5-band, and 6-band options so that I can specify the type of resistor I am working with.**
 | Feature | Action | Expected Result | Actual Result |
 |-------------------|-------------------------------------------------------------------|----------------------------------------------|------------------|
-| Basic Band Selection   |  After clicking on radio button for  4, 5 and 6 band   |   button response and updates the page       |   Work as expected       |
+| Basic Band Selection                     | After clicking on radio button for  4, 5 and 6 band | button response and updates the page | Work as expected       |
 
 **2. As a user I want the interface to update dynamically when I select different band options so that only the relevant dropdowns for my selected band option are visible and active.**
 | Feature | Action | Expected Result | Actual Result |
 |-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
-| Dynamic Interface Update    | After clicking on radio button for  4, 5 and 6 band      |      User can multiple select increase from 4 to 6       |    Work as expected    |
+| Dynamic Interface Update                 | After clicking on radio button for  4, 5 and 6 band | User can multiple select increase from 4 to 6 | Work as expected    |
 
 **3. As a user I want the calculator to adjust its resistance colour calculation based on whether I select 4-band, 5-band, or 6-band, so that I can receive accurate resistance values for different configurations.**
 | Feature | Action | Expected Result | Actual Result |
 |-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
-| Accurate Calculation for Different Bands     |      select colours in the drop-down selection     |    selected colour band are calculated     |     Work as expected   |
-
+| Accurate Calculation for Different Bands |nselect colours in the drop-down selection          | selected colour band are calculated             | Work as expected   |
+   
 **4. As a new user I want clear instructions and help regarding how to select and interpret different band options, so that I can better understand how to use the calculator effectively without prior extensive knowledge.**
 | Feature | Action | Expected Result | Actual Result |
 |-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
-| Help and Instructions for Different Bands      |    Click on instructions button     |  A popup window opens    |    Work as expected    |
+| Help and Instructions for Different Bands| Click on instructions button                         | A popup window opens                          | Work as expected    |
 
 **5. As a user I want the previously selected colors to reset or clear out when I switch between different band numbers, so that I do not have any carryover values that could affect my new calculations.**
 | Feature | Action | Expected Result | Actual Result |
 |-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
-| Reset Options When Switching Bands    | Click save, load, clear settings buttions    |    Each button responds       |    Work as expected    |
+| Reset Options When Switching Bands      | Click save, load, clear settings buttions              | Each button responds                         | Work as expected    |
 
 **6. As user, I want to select resistor bands by color so that I can learn to calculate the resistance values manually.**
 | Feature | Action | Expected Result | Actual Result |
 |-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
-| Calculation      |    Click calculate button       |   correct results are displayed       |     Work as expected   |
+| Calculation                             | Click calculate button                                 |   correct results are displayed       |     Work as expected   |
 
 **7. As a user, working on electronics projects, I need to visually match the color on my physical resistor with an interactive display so that I can confirm the resistor values before using them in circuits.**
 | Feature | Action | Expected Result | Actual Result |
 |-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
-| visually colour display   |  select colours in the drop-down selection    |     selected colour are displayed on the digital resistor    |     Work as expected   |
+| Visually colour display                 | select colours in the drop-down selection           | selected colour are displayed on the digital resistor | Work as expected   |
 
 **8.As a mobile user, I want the tool to be responsive and easy to use on my smartphone or tablet so that I can calculate resistor values on the go.**
 | Feature | Action | Expected Result | Actual Result |
 |-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
-| mobile and tablet  responsive     |     load site on mobile and tablet and test all functions      |   site responds as on desktop      |    Work as expected    |
+| Mobile and tablet  responsive           | load site on mobile and tablet and test all functions | site responds as on desktop             | Work as expected    |
 
 
 **9.As As a user,I want to receive an alert if I attempt to calculate the resistor value without selecting all required bands.**
 | Feature | Action | Expected Result | Actual Result |
 |-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
-| Alert for Incomplete Band Selection   |     leave out a selection of a colour band then press select    |  an alert popup is shown on screen   |   Work as expected     |
-
+| Alert for Incomplete Band Selection    | leave out a selection of a colour band then press select|  an alert popup is shown on screen      | Work as expected     |
 
 
 **11.As a user, I want to receive an alert for storage so that i know settings have been applied**
 | Feature | Action | Expected Result | Actual Result |
 |-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
-| Alert for storage    |     Click save, load, clear settings buttions    |  an alert popup is shown on screen    |   Work as expected     |
+| Alert for storage                     | Click save, load, clear settings buttions                 |  an alert popup is shown on screen    |   Work as expected     |
+
+
+## Deployment
+
+The website is hosted directly from the master branch on GitHub Pages. Every time a new commit is made to the main branch, the deployed site is automatically updated. The landing page must have the name index.html in order for GitHub Pages to deploy it correctly.
+
+The following actions were taken in order to deploy the page on GitHub Pages from its [GitHub repository](https://github.com/Tenda-M/risistor-colour-code/tree/main): 
+1. Sign up or log in to GitHub.
+2. Launch the repository for the project.
+3. Click the top menu and choose **Settings**.
+4. In the navigation panel on the left, select "Pages."
+5. Select the branch to be deployed (Main for more recent repositories, Master for older ones) in the "Source" section.
+6. Choose the deployment folder, usually located at "/root."
+7. Press "Save" and watch as the deployment procedure is finished.
+8. The "Source" section will be beneath your URL.
+
+### Fork:
+1. Sign up or log in to GitHub.
+2. Go to https://github.com/Tenda-M/risistor-colour-code to access the project [repository].
+3. Press the Fork icon located in the upper right corner.
+
+### Clone:
+1. Sign up or log in to GitHub.
+2. Go to https://github.com/Tenda-M/risistor-colour-code Sign up or log in to GitHub.
+2. Go to https://github.com/Tenda-M/risistor-colour-code and open the project [repository].
+3. Select your preferred cloning method (SSH, HTTPS, or GitHub CLI), click the "Code" button, and copy the provided link.
+4. Locate the cloned directory by opening the terminal of your favorite code editor and going to the desired location.
+5. Paste the link from step 3 into the terminal, type "git clone," and hit Enter.
+
+
 
 
 
 ###########################################
 
- ## User stories
+### User stories
 
 ### First Time Visitor Goals
 
