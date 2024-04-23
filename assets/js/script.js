@@ -218,6 +218,7 @@ document.querySelector("#close").addEventListener("click", function () {
 
 //******************** Resistor image *******************//
 // Function to update the resistor image
+/*
 function updateResistorImage() {
   // Get the selected colors from the dropdown menus
   let color1 = document.getElementById('select-one').options[document.getElementById('select-one').selectedIndex].dataset.color;
@@ -256,7 +257,46 @@ function updateResistorImage() {
   }
   document.getElementById('band5').className = 'band ' + colorClasses[color5];
   document.getElementById('band6').className = 'band ' + colorClasses[color6];
+}*/
+
+function updateResistorImage() {
+  // Array of IDs for each band element
+  const bandIds = ['band1', 'band2', 'band3', 'band4', 'band5', 'band6'];
+  // Array of select element IDs corresponding to each band
+  const selectIds = ['select-one', 'select-two', 'select-three', 'select-four', 'select-five', 'select-tolerance'];
+
+  // Get the selected colors from the dropdown menus
+  let selectedColors = selectIds.map(id => {
+    const selectElement = document.getElementById(id);
+    // Handle cases where the select element might be hidden and thus not part of the current band setting
+    return selectElement ? selectElement.options[selectElement.selectedIndex].dataset.color : '';
+  });
+
+  // Map colors to their corresponding CSS classes
+  const colorClasses = {
+    'black': 'band-black',
+    'brown': 'band-brown',
+    'red': 'band-red',
+    'orange': 'band-orange',
+    'yellow': 'band-yellow',
+    'green': 'band-green',
+    'blue': 'band-blue',
+    'violet': 'band-violet',
+    'grey': 'band-grey',
+    'white': 'band-white',
+    'gold': 'band-gold',
+    'silver': 'band-silver'
+  };
+
+  // Set the background color of each band based on the selected color
+  for (let i = 0; i < bandIds.length; i++) {
+    let band = document.getElementById(bandIds[i]);
+    if (band && selectedColors[i]) { // Check if the band element exists and color is selected
+      band.className = 'band ' + (colorClasses[selectedColors[i]] || 'default-class');
+    }
+  }
 }
+
 ///********#############################################################********/
 ///*****************Local storage*******************//
 
