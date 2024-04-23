@@ -6,62 +6,6 @@ let Minimum = 0;
 let Maximum = 0;
 
 // ***************** Function to check the radio button and show/hide select elements accordingly *****************/
-/*function check() {
-
-  // Get the select container for the third band
-  let selectThreeContainer = document.getElementById("band-three");
-  let selectFourContainer = document.getElementById("band-four");
-
-  console.log("Checking band settings...");
-
-  // if 4-band-button radio button is checked
-  if (document.getElementById("4-band-button").checked) {
-    console.log("Setting for 4-band...");
-    // Hide select element for third band
-    selectThreeContainer.style.display = "none";
-    selectFourContainer.style.display = "none";
-    // Remove the "required" attribute from select-three and select-four
-    document.getElementById("select-three").removeAttribute("required");
-    document.getElementById("select-four").removeAttribute("required");
-    console.log("4-band: select-three and select-four have removed required.");
-  
-    // Hide select element for third band
-    selectThreeContainer.classList.add("hidden");
-// Hide select element for fourth band
-   selectFourContainer.classList.add("hidden");
-console.log("4-band: select-three and select-four are hidden ");
-  }
-
-  // if 5-band-button radio button is checked
-  else if (document.getElementById("5-band-button").checked) {
-    console.log("Setting for 5-band...");
-    // Show select element for third band
-    selectThreeContainer.style.display = "block";
-    selectFourContainer.style.display = "none";
-    // Add the "required" attribute to select-three and remove it from select-four
-    document.getElementById("select-three").setAttribute("required", true);
-    document.getElementById("select-four").removeAttribute("required");
-    console.log("5-band: select-three is visible add required while select-four is remove required");
-
-     // Hide select element for third band
-     selectThreeContainer.classList.remove("hidden");
-     // Hide select element for fourth band
-     selectFourContainer.classList.add("hidden");
-     console.log("4-band: select-three removed hidden and select-four is hidden ");
-  }
-  // if 6-band-button radio button is checked
-  else if (document.getElementById("6-band-button").checked) {
-    console.log("Setting for 6-band...");
-    // Show select element for third band
-    selectThreeContainer.style.display = "block";
-    selectFourContainer.style.display = "block";
-    // Add the "required" attribute to both select-three and select-four
-    document.getElementById("select-three").setAttribute("required", true);
-    document.getElementById("select-four").setAttribute("required", true);
-    console.log("5-band: select-three is visible add required; select-four is hidden and add required");
-  }
-}*/
-
 function check() {
   const selectThreeContainer = document.getElementById("band-three");
   const selectFourContainer = document.getElementById("band-four");
@@ -74,16 +18,20 @@ function check() {
   document.getElementById("select-three").removeAttribute("required");
   document.getElementById("select-four").removeAttribute("required");
 
-  // Check which band is selected and adjust visibility and requirements
+  // if 4-band-button radio button is checked, Check which band is selected and adjust visibility and requirements
   if (document.getElementById("4-band-button").checked) {
     console.log("Setting for 4-band...");
     // Already hidden, just log the action
     console.log("4-band: Both select-three and select-four are hidden and not required.");
+
+    // if 5-band-button radio button is checked, Check which band is selected and adjust visibility and requirements
   } else if (document.getElementById("5-band-button").checked) {
     console.log("Setting for 5-band...");
     selectThreeContainer.style.display = "block";
     document.getElementById("select-three").setAttribute("required", true);
     console.log("5-band: select-three is visible and required; select-four remains hidden and not required.");
+
+    // if 6-band-button radio button is checked, Check which band is selected and adjust visibility and requirements
   } else if (document.getElementById("6-band-button").checked) {
     console.log("Setting for 6-band...");
     selectThreeContainer.style.display = "block";
@@ -134,21 +82,7 @@ function calculateTolerance() {
     Maximum = Result;
   }
 }
-// Function to display the calculated answer
-/*function showCalculatedAnswer() {
-  // Call the calculateAnswer function to perform the calculation
-  calculateAnswer();
-  // Display the result
-  document.getElementById("result").innerText = " The calculated result is: " + Result + " Ohms";
-
-  // Call the calculateTolerance function to calculate the tolerance
-  calculateTolerance();
-  document.getElementById("tolerance").innerText = "The calculated tolerance is +/- : " + Tolerance + "Ohms";
-  document.getElementById("minimum").innerText = "The minimum  resistor is : " + Minimum + "Ohms";
-  document.getElementById("maximum").innerText = "The maximum resistor is : " + Maximum + "Ohms";
-
-}*/
-
+/***************** Function to display the calculated answer ********************************/
 
 function showCalculatedAnswer() {
   // Check if all dropdowns have been selected
@@ -218,48 +152,7 @@ document.querySelector("#close").addEventListener("click", function () {
 
 //******************** Resistor image *******************//
 // Function to update the resistor image
-/*
-function updateResistorImage() {
-  // Get the selected colors from the dropdown menus
-  let color1 = document.getElementById('select-one').options[document.getElementById('select-one').selectedIndex].dataset.color;
-  let color2 = document.getElementById('select-two').options[document.getElementById('select-two').selectedIndex].dataset.color;
-  let color3 = document.getElementById('select-three').options[document.getElementById('select-three').selectedIndex].dataset.color;
-  let color4 = document.getElementById('select-four').options[document.getElementById('select-four').selectedIndex].dataset.color;
-  let color5 = document.getElementById('select-five').options[document.getElementById('select-five').selectedIndex].dataset.color;
-  let color6 = document.getElementById('select-tolerance').value.toLowerCase();
-  //By using the data-color attribute in the HTML to store the color names separately from the numerical values used for calculation, 
-  //you can ensure that the functionality for both calculating the resistor value and displaying the resistor image works correctly.
-
-  // Map colors to their corresponding CSS classes
-  let colorClasses = {
-    'black': 'band-black',
-    'brown': 'band-brown',
-    'red': 'band-red',
-    'orange': 'band-orange',
-    'yellow': 'band-yellow',
-    'green': 'band-green',
-    'blue': 'band-blue',
-    'violet': 'band-violet',
-    'grey': 'band-grey',
-    'white': 'band-white',
-    'gold': 'band-gold',
-    'silver': 'band-silver'
-  };
-
-  // Set the background color of each band based on the selected color
-  document.getElementById('band1').className = 'band ' + colorClasses[color1];
-  document.getElementById('band2').className = 'band ' + colorClasses[color2];
-  if (color3 !== undefined && color3 !== '') {
-    document.getElementById('band3').className = 'band ' + colorClasses[color3];
-  }
-  if (color4 !== undefined && color4 !== '') {
-    document.getElementById('band4').className = 'band ' + colorClasses[color4];
-  }
-  document.getElementById('band5').className = 'band ' + colorClasses[color5];
-  document.getElementById('band6').className = 'band ' + colorClasses[color6];
-}*/
-
-function updateResistorImage() {
+/*function updateResistorImage() {
   // Array of IDs for each band element
   const bandIds = ['band1', 'band2', 'band3', 'band4', 'band5', 'band6'];
   // Array of select element IDs corresponding to each band
@@ -295,9 +188,25 @@ function updateResistorImage() {
       band.className = 'band ' + (colorClasses[selectedColors[i]] || 'default-class');
     }
   }
+}*/
+
+// Function to update the resistor image
+function updateResistorImage() {
+  const bandIds = ['band1', 'band2', 'band3', 'band4', 'band5', 'band6'];
+  const selectIds = ['select-one', 'select-two', 'select-three', 'select-four', 'select-five', 'select-tolerance'];
+
+  bandIds.forEach((bandId, index) => {
+      const band = document.getElementById(bandId);
+      const select = document.getElementById(selectIds[index]);
+      const colorValue = select.options[select.selectedIndex].getAttribute('data-color');
+      if (colorValue) {
+          band.style.backgroundColor = colorValue; // Use the actual color value or a mapping if necessary
+      } else {
+          band.style.backgroundColor = 'transparent'; // Default to transparent if no color selected
+      }
+  });
 }
 
-///********#############################################################********/
 ///*****************Local storage*******************//
 
 // Function to save current settings to local storage
@@ -333,15 +242,61 @@ function loadFromLocalStorage() {
   }
 }
 
-// Function to clear settings from local storage
+/*************  Function to clear settings from local storage *****************/
+// Clear settings from local storage and update UI accordingly
 function clearLocalStorage() {
   localStorage.removeItem('resistorSettings');
+  resetDropdownsAndClearImage(); // Reset selections and clear image
   alert("Settings cleared!");
-  // Optionally reset the dropdowns to their default values
-  document.querySelectorAll('select').forEach(select => select.selectedIndex = 0);
-  updateResistorImage(); // Refresh the display to default image
+}
+
+// Function to reset display values
+function resetDisplayValues() {
+    document.getElementById("result").innerText = "Calculated value: ";
+    document.getElementById("tolerance").innerText = "Tolerance value: ";
+    document.getElementById("minimum").innerText = "Minimum value: ";
+    document.getElementById("maximum").innerText = "Maximum value: ";
+}
+
+// Function to reset all dropdowns to their default "Colour band" option and re-hook the event listeners
+// Reset dropdowns to their default state and clear the resistor image
+function resetDropdownsAndClearImage() {
+  document.querySelectorAll('select').forEach(select => {
+      select.selectedIndex = 0; // Reset each select to the default option
+  });
+  updateResistorImage(); // Immediately reflect the reset state in the image
+}
+
+// Function to clear all resistor bands visually
+function clearResistorBands() {
+  const bandIds = ['band1', 'band2', 'band3', 'band4', 'band5', 'band6'];
+  bandIds.forEach(bandId => {
+      const band = document.getElementById(bandId);
+      band.style.backgroundColor = 'transparent'; // Use transparent or any default color
+  });
 }
 
 
-///********#############################################################********/
+// Function to ensure update hooks are correctly established
+// Add event listeners to selects and radio buttons for consistent functionality
+function setupEventListeners() {
+  document.querySelectorAll('select').forEach(select => {
+      select.addEventListener('change', updateResistorImage); // Ensure image updates on every change
+  });
 
+  document.querySelectorAll('input[type="radio"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+          check(); // Adjust visibility of selectors based on band choice
+          resetDropdownsAndClearImage(); // Reset selections and clear image whenever band choice changes
+      });
+  });
+}
+
+
+
+
+// Set up everything when the page loads
+window.onload = function() {
+  setupEventListeners(); // Set up event listeners on page load
+  check(); // Initial UI setup based on default or stored settings
+};
