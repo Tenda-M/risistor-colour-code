@@ -39,6 +39,21 @@ A live demo can be found [here.](https://tenda-m.github.io/risistor-colour-code/
    7. [Alert](#alert)
    8. [Footer](#footer)
    9. [Future features](#future-features)
+6. [Bugs / Improvements](#bugs--improvements)
+   1. [lighthouse](#lighthouse)
+   2. [HTML](#html)
+   3. [JavaScript](#javascript)
+7. [Validation](#validation)
+   1. [HTML Validation](#html-validation)
+   2. [CSS Validation](#css-validation)
+   3. [JavaScript Validation](#javascript-validation)
+8. [Lighthouse](#lighthouse-1)
+9. [Testing](#testing)
+   1. [Device Test](#device-test)
+   2. [Browser Test](#browser-test)
+   3. [Features Test](#features-test)
+   4. [Testing User Stories](#testing-user-stories)
+
 * [Languages Used](#languages-used)
 * [User Experience](#user-experience-ux)
 * [Design](#design)
@@ -102,16 +117,26 @@ By fulfilling these objectives, the Resistor Colour Code Tool will serve as a us
 * Error Handling: When users pick items that are incompatible or if an input exceeds the expected range, clear messages or alarms should be sent. Correction suggestions to avoid misunderstandings or improper usage of the instrument.
 
 ### User Stories
+* As a user, I want to choose between 4-band, 5-band, and 6-band options so that I can specify the type of resistor I am working with.
+
+* As a user I want the interface to update dynamically when I select different band options so that only the relevant dropdowns for my selected band option are visible and active.
+
+* As a user I want the calculator to adjust its resistance colour calculation based on whether I select 4-band, 5-band, or 6-band, so that I can receive accurate resistance values for different configurations.
+
+* As a new user I want clear instructions and help regarding how to select and interpret different band options, so that I can better understand how to use the calculator effectively without prior extensive knowledge.
+
+* As a user I want the previously selected colors to reset or clear out when I switch between different band numbers, so that I do not have any carryover values that could affect my new calculations.
 
 * As user, I want to select resistor bands by color so that I can learn to calculate the resistance values manually.
 
 * As a user, working on electronics projects, I need to visually match the color on my physical resistor with an interactive display so that I can confirm the resistor values before using them in circuits.
 
-* As a user, I want to be able to quickly input multiple resistor color codes and get accurate results so that I can efficiently verify components during my work.
-
 * As a mobile user, I want the tool to be responsive and easy to use on my smartphone or tablet so that I can calculate resistor values on the go.
 
-* As an advanced user, I want to be able to configure settings for tolerance.
+* As As a user,I want to receive an alert if I attempt to calculate the resistor value without selecting all required bands.
+
+* As a user, I want to receive an alert for storage so that i know settings have been applied
+
 
 ### Features To Achieve These Goals
 
@@ -193,7 +218,7 @@ The heading has a logo that reflects the theme of the website. This is a graphic
 Website Title: Next to  the logo, the title "Resistor Colour Code Calculator" that is prominently displayed. This title clearly describes the purpose of the website and reinforces its functionality.
 
 #### Instruction Button:
-A button labeled "Instructions" (id="popupTrigger") is placed near the header area.
+A button labeled "Instructions is placed near the header area.
 
 This button, when clicked, triggers a popup that provides users with a guide on how to use the resistor colour code calculator effectively.
 
@@ -214,27 +239,27 @@ Functions for saving, loading, and clearing resistor configurations using the br
 #### Alert
 * Validation Alert:
 Purpose: To inform the user that not all required selections have been made before performing a calculation.
-Example Message: "Please select values from all dropdown menus before calculating."
+Message: "Please select values from all dropdown menus before calculating."
 This alert ensures that the user completes all necessary inputs to get a valid calculation result, preventing errors or incorrect resistor values.
 
 * Save Confirmation Alert:
 Purpose: To confirm that the resistor settings have been successfully saved to the browser's local storage.
-Example Message: "Settings saved!"
+Message: "Settings saved!"
 This feedback reassures the user that their data has been stored correctly and can be retrieved later.
 
 * Load Confirmation Alert:
 Purpose: To notify the user that previously saved settings have been successfully loaded.
-Example Message: "Settings loaded!"
+Message: "Settings loaded!"
 This alert confirms that the saved data is now active on the calculator, allowing the user to continue where they left off or review saved configurations.
 
 * No Saved Settings Alert:
 Purpose: To inform the user that there are no saved settings available to load.
-Example Message: "No saved settings found."
+Message: "No saved settings found."
 This message is useful for clarifying to the user that there is no saved data, which might be due to never saving any settings or clearing them previously.
 
 * Clear Settings Alert:
 Purpose: To confirm that all saved settings have been cleared from local storage.
-Example Message: "Settings cleared!"
+Message: "Settings cleared!"
 This message confirms the user's action of clearing data, ensuring they understand that all saved configurations have been erased.
 
 #### Future features
@@ -244,6 +269,123 @@ To enhance the functionality and user experience of the Resistor Color Code webs
    Allow users to create accounts to save their preferences, past calculations, and custom configurations securely online.
 * Advanced Calculation Options:
 Include additional calculations such as power, current, and voltage using Ohm's Law, enhancing the tool's usefulness for more complex electronic projects.
+
+## Validation
+To check for syntax errors on each page of the project, the W3C Markup Validator and W3C CSS Validator Services were utilized.
+
+### Lighthouse
+
+### HTML
+
+### JavaScript
+
+## Lighthouse
+
+### Device test
+Tested with Mobile, tablet, laptop and desktop all worked
+
+### Browser test
+Google Chrome, Microsoft Edge, Mozilla Firefox
+
+### Features test
+| Feature                                                                                                                                                        | Result |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+|   Tested instructin button works                                                                                                                               |        |
+|   Tested four band Radio button loads correct select band                                                                                                      |        |
+|   Tested five band Radio button loads correct select band                                                                                                      |        |
+|   Tested six band Radio button loads correct select band                                                                                                       |        |
+|   Tested dropdown menus for first band                                                                                                                         |        |
+|   Tested dropdown menus for second band                                                                                                                        |        |
+|   Tested dropdown menus for third band                                                                                                                         |        |
+|   Tested dropdown menus for fourth band                                                                                                                        |        |
+|   Tested dropdown menus for fifth band                                                                                                                         |        |
+|   Tested dropdown menus for tolerance band                                                                                                                     |        |
+|   Tested add settings storage button  and functionality                                                                                                        |        |
+|   Tested load settings storage button and functionality                                                                                                        |        |
+|   Tested clear settings storage button and functionality                                                                                                       |        |
+|   Tested calculate button                                                                                                                                      |        |
+|   Tested display value for calculated value                                                                                                                    |        |
+|   Tested display value for tolerance value                                                                                                                     |        |
+|   Tested display value for calculated minimum value                                                                                                            |        |
+|   Tested display value for tolerance Maximum alue                                                                                                              |        |
+|   Tested calculated results for four band select with gold tolerance                                                                                           |        |
+|   Tested calculated results for five band select with gold tolerance                                                                                           |        |
+|   Tested calculated results for six band select with gold tolerance                                                                                            |        |
+|   Tested calculated results for four band select with silver tolerance                                                                                         |        |
+|   Tested calculated results for five band select with silver tolerance                                                                                         |        |
+|   Tested calculated results for six band select with silver tolerance                                                                                          |        |
+|   Tested Alert for validation alert                                                                                                                            |        |
+|   Tested Alert for save confirmation alert                                                                                                                     |        |
+|   Tested Alert for load confirmation alert                                                                                                                     |        |
+|   Tested Alert for no saved settings alert                                                                                                                     |        |
+|   Tested Alert for clear settings alert                                                                                                                        |        |
+|                                                                                                                                                                |        |
+|                                                                                                                                                                |        |
+|                                                                                                                                                                |        |
+|                                                                                                                                                                |        |
+|                                                                                                                                                                |        |
+|                                                                                                                                                                |        |
+|                                                                                                                                                                |        |
+|                                                                                                                                                                |        |
+|                                                                                                                                                                |        |
+                                                                                                                                                                   
+
+### Testing User Stories
+
+**1. As a user, I want to choose between 4-band, 5-band, and 6-band options so that I can specify the type of resistor I am working with.**
+| Feature | Action | Expected Result | Actual Result |
+|-------------------|-------------------------------------------------------------------|----------------------------------------------|------------------|
+| Basic Band Selection   |  After clicking on radio button for  4, 5 and 6 band   |   button response and updates the page       |   Work as expected       |
+
+**2. As a user I want the interface to update dynamically when I select different band options so that only the relevant dropdowns for my selected band option are visible and active.**
+| Feature | Action | Expected Result | Actual Result |
+|-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
+| Dynamic Interface Update    | After clicking on radio button for  4, 5 and 6 band      |      User can multiple select increase from 4 to 6       |    Work as expected    |
+
+**3. As a user I want the calculator to adjust its resistance colour calculation based on whether I select 4-band, 5-band, or 6-band, so that I can receive accurate resistance values for different configurations.**
+| Feature | Action | Expected Result | Actual Result |
+|-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
+| Accurate Calculation for Different Bands     |      select colours in the drop-down selection     |    selected colour band are calculated     |     Work as expected   |
+
+**4. As a new user I want clear instructions and help regarding how to select and interpret different band options, so that I can better understand how to use the calculator effectively without prior extensive knowledge.**
+| Feature | Action | Expected Result | Actual Result |
+|-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
+| Help and Instructions for Different Bands      |    Click on instructions button     |  A popup window opens    |    Work as expected    |
+
+**5. As a user I want the previously selected colors to reset or clear out when I switch between different band numbers, so that I do not have any carryover values that could affect my new calculations.**
+| Feature | Action | Expected Result | Actual Result |
+|-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
+| Reset Options When Switching Bands    | Click save, load, clear settings buttions    |    Each button responds       |    Work as expected    |
+
+**6. As user, I want to select resistor bands by color so that I can learn to calculate the resistance values manually.**
+| Feature | Action | Expected Result | Actual Result |
+|-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
+| Calculation      |    Click calculate button       |   correct results are displayed       |     Work as expected   |
+
+**7. As a user, working on electronics projects, I need to visually match the color on my physical resistor with an interactive display so that I can confirm the resistor values before using them in circuits.**
+| Feature | Action | Expected Result | Actual Result |
+|-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
+| visually colour display   |  select colours in the drop-down selection    |     selected colour are displayed on the digital resistor    |     Work as expected   |
+
+**8.As a mobile user, I want the tool to be responsive and easy to use on my smartphone or tablet so that I can calculate resistor values on the go.**
+| Feature | Action | Expected Result | Actual Result |
+|-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
+| mobile and tablet  responsive     |     load site on mobile and tablet and test all functions      |   site responds as on desktop      |    Work as expected    |
+
+
+**9.As As a user,I want to receive an alert if I attempt to calculate the resistor value without selecting all required bands.**
+| Feature | Action | Expected Result | Actual Result |
+|-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
+| Alert for Incomplete Band Selection   |     leave out a selection of a colour band then press select    |  an alert popup is shown on screen   |   Work as expected     |
+
+
+
+**11.As a user, I want to receive an alert for storage so that i know settings have been applied**
+| Feature | Action | Expected Result | Actual Result |
+|-----------|-------------------------------------------------------------------|----------------------------------------------|------------------|
+| Alert for storage    |     Click save, load, clear settings buttions    |  an alert popup is shown on screen    |   Work as expected     |
+
+
 
 ###########################################
 
