@@ -29,6 +29,16 @@ A live demo can be found [here.](https://tenda-m.github.io/risistor-colour-code/
    1. [Technologies Used](#technologies-used)
    2. [Frameworks](#frameworks)
    3. [Tools](#tools)
+5. [Features](#features)
+   1. [Heading](#heading)
+   2. [Instruction Button](#instruction-button)
+   3. [Interactive Resistor Color Code Calculator:](#interactive-resistor-color-code-calculator)
+   4. [Dynamic Resistor Display](#dynamic-resistor-display)
+   5. [Local Storage Interaction](#local-storage-interaction)
+   6. [Calculation Output](#calculation-output)
+   7. [Alert](#alert)
+   8. [Footer](#footer)
+   9. [Future features](#future-features)
 * [Languages Used](#languages-used)
 * [User Experience](#user-experience-ux)
 * [Design](#design)
@@ -173,12 +183,69 @@ The structure implemented for this project is a single HTML.
 - Visual Studio Code
 - Photoshop
 - Illustrator
-  
+
+## Features
+
+### Main
+#### Heading
+The heading has a logo that reflects the theme of the website. This is a graphic representation of a resistor or a symbolic representation of electronics and circuitry. The logo helps in branding and makes the site immediately recognisable to users.
+
+Website Title: Next to  the logo, the title "Resistor Colour Code Calculator" that is prominently displayed. This title clearly describes the purpose of the website and reinforces its functionality.
+
+#### Instruction Button:
+A button labeled "Instructions" (id="popupTrigger") is placed near the header area.
+
+This button, when clicked, triggers a popup that provides users with a guide on how to use the resistor colour code calculator effectively.
+
+This feature enhances user experience by offering accessible assistance, making the tool more user-friendly, especially for first-time visitors
+
+#### Interactive Resistor Color Code Calculator:
+Band Selection: Users can select between different resistor types (3-band, 4-band, 5-band, and 6-band), with dropdown menus for each band's color. These selections dynamically adjust the displayed resistor image and the calculated values.
+
+#### Dynamic Resistor Display: 
+As users select colors for each band, a visual representation of the resistor updates in real-time, reflecting the chosen colors.
+
+#### Local Storage Interaction: 
+Functions for saving, loading, and clearing resistor configurations using the browser's local storage allow users to save their settings for later use or clear them as needed.
+
+#### Calculation Output:
+ After selecting the colors, users can click the "Calculate" button to see the resistance value, tolerance, and the minimum and maximum resistance values based on the tolerance.
+
+#### Alert
+* Validation Alert:
+Purpose: To inform the user that not all required selections have been made before performing a calculation.
+Example Message: "Please select values from all dropdown menus before calculating."
+This alert ensures that the user completes all necessary inputs to get a valid calculation result, preventing errors or incorrect resistor values.
+
+* Save Confirmation Alert:
+Purpose: To confirm that the resistor settings have been successfully saved to the browser's local storage.
+Example Message: "Settings saved!"
+This feedback reassures the user that their data has been stored correctly and can be retrieved later.
+
+* Load Confirmation Alert:
+Purpose: To notify the user that previously saved settings have been successfully loaded.
+Example Message: "Settings loaded!"
+This alert confirms that the saved data is now active on the calculator, allowing the user to continue where they left off or review saved configurations.
+
+* No Saved Settings Alert:
+Purpose: To inform the user that there are no saved settings available to load.
+Example Message: "No saved settings found."
+This message is useful for clarifying to the user that there is no saved data, which might be due to never saving any settings or clearing them previously.
+
+* Clear Settings Alert:
+Purpose: To confirm that all saved settings have been cleared from local storage.
+Example Message: "Settings cleared!"
+This message confirms the user's action of clearing data, ensuring they understand that all saved configurations have been erased.
+
+#### Future features
+To enhance the functionality and user experience of the Resistor Color Code website, the following features can be added in the future:
+
+* User Accounts and Profile Management:
+   Allow users to create accounts to save their preferences, past calculations, and custom configurations securely online.
+* Advanced Calculation Options:
+Include additional calculations such as power, current, and voltage using Ohm's Law, enhancing the tool's usefulness for more complex electronic projects.
+
 ###########################################
-
-
-
-
 
  ## User stories
 
