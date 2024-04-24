@@ -19,7 +19,7 @@ h1 {
     padding-bottom: 20px;
 }
 
-/*** Pop up window *****/
+/**************** Instruction Pop up window *********/
 .popup {
     position: fixed;  /* Changed to 'fixed' to stay positioned relative to the viewport */
     top: 0;           /* Align the top edge of the popup at the top edge of the viewport */
@@ -28,7 +28,7 @@ h1 {
     bottom: 0;        /* Align the bottom edge of the popup at the bottom edge of the viewport */
     margin: auto;     /* Automatically margin to center both vertically and horizontally */
     width: 50%;       /* Optional: Set the width of the popup */
-    max-width: 530px; /* Maintain a max-width for larger displays */
+    max-width: auto; /* Maintain a max-width for larger displays */
     height: 60%;     /* Height can be 60% based on content */
     border: 1px solid grey;
     background-color: burlywood;
@@ -63,7 +63,7 @@ h1 {
     cursor: pointer;
 }
 
-/* Band select div styling */
+/******** Band select div styling ************/
 .band-select {
     display: flex;/* Use flexbox to arrange items */
     justify-content: center;
@@ -83,12 +83,12 @@ h1 {
     justify-content: space-between;
     /* Distribute items evenly */
     width: 30%;
-    /* Set width to 80% of the container */
+    /* Set width to 30% of the container */
     margin: 0 auto;
     /* Center the resistor horizontally */
     background-color: burlywood;
 }
-/* each band size of resistor colour*/
+/********* Each band size of resistor colour*******/
 .band {
     display: inline-block; /* Display the color bands inline */
     height: 100px; /* Set the height of each color band */
@@ -151,22 +151,8 @@ h1 {
 .band-silver {
     background-color: silver;
 }
-/***#########################################################################***/
-/*****************Local storage*******************/
-button-store {
-    padding: 10px;
-    margin: 5px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-button-store:hover {
-    background-color: #45a049;
-}
-
+/*****************Local storage buttons*******************/
 .controls {
     text-align: center;
     margin-top: 20px;
@@ -214,7 +200,7 @@ footer>p {
 	/*space icons*/
 }
 
-/***#########################################################################***/
+/**********************Media query ***************/
 /* Style for the resistor image */
 /* Media query: tablets and lower (768px and down) */
 @media screen and (max-width: 768px) {
