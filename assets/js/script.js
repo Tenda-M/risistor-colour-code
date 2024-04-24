@@ -74,6 +74,22 @@ function check() {
 
 
 // ************************ Function to perform the calculation **************************//
+
+//format output Number function
+function formatNumber(value) {
+  if (value < 1e3) {
+      return value + " Ohms";
+  } else if (value >= 1e3 && value < 1e6) {
+      return (value / 1e3).toFixed(1) + " KΩ"; // Kiloohms
+  } else if (value >= 1e6 && value < 1e9) {
+      return (value / 1e6).toFixed(1) + " MΩ"; // Megaohms
+  } else if (value >= 1e9) {
+      return (value / 1e9).toFixed(1) + " GΩ"; // Gigaohms
+  }
+}
+
+
+
 function calculateAnswer() {
   // declare local variable for the selected values of the bands
   let selectOne = document.getElementById('select-one').value;
@@ -114,7 +130,7 @@ function calculateTolerance() {
   }
 }
 /***************** Function to display the calculated answer ********************************/
-
+/*
 function showCalculatedAnswer() {
   // Check if all dropdowns have been selected
   if (validateDropdowns()) {
@@ -140,7 +156,29 @@ function showCalculatedAnswer() {
     // If dropdowns are not all selected, display an alert or handle the error as desired
     alert("Please select values from all dropdown menus before calculating.");
   }
+}*/
+function showCalculatedAnswer() {
+  if (validateDropdowns()) {
+      calculateAnswer();
+      calculateTolerance();
+
+      console.log("Calculation results:", {
+          Result: Result,
+          Tolerance: Tolerance,
+          Minimum: Minimum,
+          Maximum: Maximum
+      });
+
+      // Using the formatNumber function to format the display of results
+      document.getElementById("result").innerText = "Calculated value: " + formatNumber(Result);
+      document.getElementById("tolerance").innerText = "Tolerance: ±" + formatNumber(Tolerance);
+      document.getElementById("minimum").innerText = "Minimum value: " + formatNumber(Minimum);
+      document.getElementById("maximum").innerText = "Maximum value: " + formatNumber(Maximum);
+  } else {
+      alert("Please select values from all dropdown menus before calculating.");
+  }
 }
+
 
 // this function is responsible for checking if all visible dropdowns that have been selected.//
 function validateDropdowns() {
@@ -221,7 +259,7 @@ document.querySelector("#close").addEventListener("click", function () {
   }
 }*/
 
-// Function to update the resistor image
+/********* Function to update the resistor image *************/
 function updateResistorImage() {
   const bandIds = ['band1', 'band2', 'band3', 'band4', 'band5', 'band6'];
   const selectIds = ['select-one', 'select-two', 'select-three', 'select-four', 'select-five', 'select-tolerance'];
