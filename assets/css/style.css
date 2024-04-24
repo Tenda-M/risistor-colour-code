@@ -172,6 +172,48 @@ button-store:hover {
     margin-top: 20px;
 }
 
+/****************** Footer ***************************************/
+footer {
+	background-color: white;
+	padding: 20px;
+}
+
+footer>h3 {
+	text-transform: uppercase;
+	text-align: center;
+	color:#445361;
+}
+
+footer>p {
+	text-align: center;
+	color:#445361;
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+
+
+#social-networks {
+	text-align: right;
+	/*the footer social icons to be in the right*/
+	padding: 20px;
+	/*gives padding of the icons*/
+	display: flex;
+	/* places them side by side horizontally*/
+	justify-content: center;
+	/*place icons to center*/
+	list-style-type: none;
+}
+
+/*Social - networks i elements. ***/
+#social-networks i {
+	font-size: 160%;
+	padding: 5%;
+	color:#445361;
+	margin: 0 5px;
+	/*space icons*/
+}
+
 /***#########################################################################***/
 /* Style for the resistor image */
 /* Media query: tablets and lower (768px and down) */

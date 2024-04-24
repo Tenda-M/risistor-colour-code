@@ -24,7 +24,7 @@
 
     <!--Connecting styling sheets-->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
 </head>
 
 <body>
@@ -100,7 +100,7 @@
                 <div>
                     <!--Select Tag and option for the second band-->
                     <label>Select Second Band:</label> <br>
-                    <select id="select-two" onchange="updateResistorImage()"required>
+                    <select id="select-two" onchange="updateResistorImage()" required>
                         <option value="colour band" selected>Colour band</option>
                         <option value=0 data-color="black">Black</option>
                         <option value=1 data-color="brown">Brown</option>
@@ -117,10 +117,10 @@
                     </select>
                 </div>
 
-                <div id="band-three" style="display:none;" >
+                <div id="band-three" style="display:none;">
                     <!--Select Tag and option for the third band-->
                     <label>Select Third Band:</label> <br>
-                    <select id="select-three" onchange="updateResistorImage()" >
+                    <select id="select-three" onchange="updateResistorImage()">
                         <option value="colour band" selected>Colour band</option>
                         <option value=0 data-color="black">Black</option>
                         <option value=1 data-color="brown">Brown</option>
@@ -138,7 +138,7 @@
                 </div>
                 <div id="band-four" style="display: none;">
                     <!--Select Tag and option for the fourth band-->
-                    <label >Select Fourth Band:</label> <br>
+                    <label>Select Fourth Band:</label> <br>
                     <select id="select-four" onchange="updateResistorImage()">
                         <option value="colour band" selected>Colour band</option>
                         <option value=0 data-color="black">Black</option>
@@ -192,17 +192,17 @@
                 <div class="band" id="band5"></div>
                 <div class="band" id="band6"></div>
             </div>
-<!--######################################################-->
- <!-- additional dropdowns for other bands -->
- <div class="controls">
-    <button type="button-store" onclick="saveToLocalStorage()">Save Settings</button>
-    <button type="button-store" onclick="loadFromLocalStorage()">Load Settings</button>
-    <!--<button type="button-store" onclick="clearLocalStorage()">Clear Settings</button> -->
-    <!--Ensure your button in HTML calls this function--> 
-    <button type="button" onclick="clearLocalStorage()">Clear Settings</button>
-</div>
+            <!--######################################################-->
+            <!-- additional dropdowns for other bands -->
+            <div class="controls">
+                <button type="button-store" onclick="saveToLocalStorage()">Save Settings</button>
+                <button type="button-store" onclick="loadFromLocalStorage()">Load Settings</button>
+                <!--<button type="button-store" onclick="clearLocalStorage()">Clear Settings</button> -->
+                <!--Ensure your button in HTML calls this function-->
+                <button type="button" onclick="clearLocalStorage()">Clear Settings</button>
+            </div>
 
-<!--######################################################-->
+            <!--######################################################-->
             <br>
 
             <div class="answer-area">
@@ -214,9 +214,40 @@
                 <p id="maximum"> Tolerance Maximum alue</p>
             </div>
         </div>
+    </div>
+    <!--footer-->
+    <footer>
+        <h3>Follow us on our social media and get in touch!</h3>
+        <ul id="social-networks">
+            <li>
+                <a href="https://www.Facebook.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our Facebook page (opens in new tab)">
+                    <i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our instagram page (opens in new tab)">
+                    <i class="fa-brands fa-square-instagram"></i></a>
+            </li>
+            <li>
+                <a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our twitter page (opens in new tab)">
+                    <i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our youtube page (opens in new tab)">
+                    <i class="fa-brands fa-youtube"></i></a>
+            </li>
+        </ul>
+        <p>
+            Developed By Tatenda Mudehwe | Code Institute's Portfolio Project 2 - 2024
+        </p>
+    </footer>
+    <!--Font Awesome kit script-->
+    <script src="https://kit.fontawesome.com/4892267aa3.js" crossorigin="anonymous"></script>
 
-
-        <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 
