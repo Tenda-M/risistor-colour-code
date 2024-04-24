@@ -322,12 +322,14 @@ function resetDropdowns() {
 /********** Function to clear all resistor bands visually **************/
 // Function to clear all resistor bands visually
 function clearResistorBands() {
-  const bandIds = ['band1', 'band2', 'band3', 'band4', 'band5', 'band6'];
-  bandIds.forEach(bandId => {
-      const band = document.getElementById(bandId);
-      band.style.backgroundColor = 'transparent'; // Use transparent or any default color
-  });
+  // Assuming there are 6 bands to clear
+  for (let i = 1; i <= 6; i++) {
+    const band = document.getElementById('band' + i);
+    band.style.backgroundColor = 'transparent'; // Set to transparent or any default color
+  }
 }
+
+
 /********** Function to ensure update hooks are correctly established*************/
 // Add event listeners to selects and radio buttons for consistent functionality
 function setupEventListeners() {
