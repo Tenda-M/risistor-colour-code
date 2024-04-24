@@ -174,8 +174,8 @@ button-store:hover {
 
 /****************** Footer ***************************************/
 footer {
-	background-color: white;
-	padding: 20px;
+	background-color:white;
+    margin-bottom: 0%;
 }
 
 footer>h3 {
@@ -196,7 +196,7 @@ footer>p {
 #social-networks {
 	text-align: right;
 	/*the footer social icons to be in the right*/
-	padding: 20px;
+	padding: 10px;
 	/*gives padding of the icons*/
 	display: flex;
 	/* places them side by side horizontally*/
