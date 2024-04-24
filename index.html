@@ -98,7 +98,9 @@
     
                     <label for="select-one">Select First Band:</label> <br>
                     <select id="select-one" onchange="updateResistorImage()" required>
-                        <option value="colour band" selected>Colour band</option>
+
+                        <option value="" disabled selected>Select a color</option>
+                        
                         <!-- Add value to be used for resistor calculation and data-color attribute with the color name -->
                         <option value=0 data-color="black">Black</option>
                         <option value=1 data-color="brown">Brown</option>
@@ -120,7 +122,9 @@
                   
                     <label for="select-two">Select Second Band:</label> <br>
                     <select id="select-two" onchange="updateResistorImage()" required>
-                        <option value="colour band" selected>Colour band</option>
+                        
+                        <option value="" disabled selected>Select a color</option>
+
                         <option value=0 data-color="black">Black</option>
                         <option value=1 data-color="brown">Brown</option>
                         <option value=2 data-color="red">Red</option>
@@ -141,7 +145,9 @@
                    
                     <label for="select-three">Select Third Band:</label> <br>
                     <select id="select-three" onchange="updateResistorImage()">
-                        <option value="colour band" selected>Colour band</option>
+                        
+                        <option value="" disabled selected>Select a color</option>
+
                         <option value=0 data-color="black">Black</option>
                         <option value=1 data-color="brown">Brown</option>
                         <option value=2 data-color="red">Red</option>
@@ -161,7 +167,9 @@
                     
                     <label for="select-four">Select Fourth Band:</label> <br>
                     <select id="select-four" onchange="updateResistorImage()">
-                        <option value="colour band" selected>Colour band</option>
+                        
+                        <option value="" disabled selected>Select a color</option>
+
                         <option value=0 data-color="black">Black</option>
                         <option value=1 data-color="brown">Brown</option>
                         <option value=2 data-color="red">Red</option>
@@ -181,7 +189,9 @@
                     
                     <label for="select-five">Select Fifth Band (multiplier):</label> <br>
                     <select id="select-five" onchange="updateResistorImage()" required>
-                        <option value="colour band" selected>Colour band</option>
+
+                        <option value="" disabled selected>Select a color</option>
+
                         <option value=1 data-color="black">Black</option>
                         <option value=10 data-color="brown">Brown</option>
                         <option value=100 data-color="red">Red</option>
@@ -199,7 +209,9 @@
                    
                     <label for="select-tolerance">Select Tolerance:</label><br>
                     <select id="select-tolerance" onchange="updateResistorImage()" required>
-                        <option>Tolerance band</option>
+                       
+                        <option value="" disabled selected>Select tolerance</option>
+                        
                         <option value=Gold data-color="gold">Gold</option>
                         <option value=Silver data-color="silver">Silver</option>
                     </select>
@@ -218,8 +230,11 @@
             <!--######################################################-->
             <!-- additional dropdowns for other bands -->
             <div class="controls">
-                <button type="button-store" onclick="saveToLocalStorage()">Save Settings</button>
-                <button type="button-store" onclick="loadFromLocalStorage()">Load Settings</button>
+                
+
+                <button type="button" onclick="saveToLocalStorage()">Save Settings</button>
+                <button type="button" onclick="loadFromLocalStorage()">Load Settings</button>
+                
                 <!--<button type="button-store" onclick="clearLocalStorage()">Clear Settings</button> -->
                 <!--Ensure your button in HTML calls this function-->
                 <button type="button" onclick="clearLocalStorage()">Clear Settings</button>

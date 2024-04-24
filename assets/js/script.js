@@ -181,7 +181,7 @@ function showCalculatedAnswer() {
 
 
 // this function is responsible for checking if all visible dropdowns that have been selected.//
-function validateDropdowns() {
+/*function validateDropdowns() {
   let isValid = true;
   console.log("Validating dropdown selections...");
 
@@ -199,8 +199,27 @@ function validateDropdowns() {
       }
   });
   return isValid;
-}
+} */
 
+function validateDropdowns() {
+  let isValid = true;
+  console.log("Validating dropdown selections...");
+
+  document.querySelectorAll("select").forEach(select => {
+      let style = window.getComputedStyle(select);
+      if (style.display !== "none" && select.required) {
+          if (select.value === "") {  // Check for an empty value instead of "colour band"
+              isValid = false;
+              console.log(`Validation failed on: ${select.id}, Value: ${select.value}`);
+          } else {
+              console.log(`Validation passed on: ${select.id}, Value: ${select.value}`);
+          }
+      } else {
+          console.log(`Skipped validation on: ${select.id}, Display: ${style.display}, Required: ${select.required}`);
+      }
+  });
+  return isValid;
+}
 
 //**************** Page popup box ******************//
 // an event listener to the element that will trigger the popup

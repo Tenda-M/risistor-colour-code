@@ -231,32 +231,32 @@ This feature enhances user experience by offering accessible assistance, making 
 #### Interactive Resistor Color Code Calculator:
 Band Selection: Users can select between different resistor types (3-band, 4-band, 5-band, and 6-band), with dropdown menus for each band's color. These selections dynamically adjust the displayed resistor image and the calculated values.
 
-![Desktop 4 band](./readme/media/desktop-4-band-feature.png)  
-![Desktop 5 band](./readme/media/desktop-5-band-feature.png)  
-![Desktop 6 band](./readme/media/desktop-6-band-feature.png)  
+[Desktop 4 band](./readme/media/desktop-4-band-feature.png)  
+[Desktop 5 band](./readme/media/desktop-5-band-feature.png)  
+[Desktop 6 band](./readme/media/desktop-6-band-feature.png)  
 
-![Mobile 4 band](./readme/media/phone-4-band-feature.png)     
-![Mobile 5 band](./readme/media/phone-5-band-feature.png)  
-![Mobile 6 band](./readme/media/phone-6-band-feature.png) 
+[Mobile 4 band](./readme/media/phone-4-band-feature.png)     
+[Mobile 5 band](./readme/media/phone-5-band-feature.png)  
+[Mobile 6 band](./readme/media/phone-6-band-feature.png) 
 
 #### Dynamic Resistor Display: 
 As users select colors for each band, a visual representation of the resistor updates in real-time, reflecting the chosen colors.
 
-![Resistor Display image without colour band selection](./readme/media/display-image-no-band.png)
-![Resistor Display image with four colour band selection](./readme/media/display-image-4-band.png)
-![Resistor Display image with five colour band selection](./readme/media/display-image-5-band.png)
-![Resistor Display image with six colour band selection](./readme/media/display-image-6-band.png)
+[Resistor Display image without colour band selection](./readme/media/display-image-no-band.png)
+[Resistor Display image with four colour band selection](./readme/media/display-image-4-band.png)
+[Resistor Display image with five colour band selection](./readme/media/display-image-5-band.png)
+[Resistor Display image with six colour band selection](./readme/media/display-image-6-band.png)
 
 #### Local Storage Interaction: 
 Functions for saving, loading, and clearing resistor configurations using the browser's local storage allow users to save their settings for later use or clear them as needed. These functions are triggered by button clicks in the user interface
 
-![Local Storage Interaction image ](./readme/media/storage-buttons.png)
+[Local Storage Interaction image ](./readme/media/storage-buttons.png)
 
 #### Calculation Output:
  After selecting the colors, users can click the "Calculate" button to see the resistance value, tolerance, and the minimum and maximum resistance values based on the tolerance.
 
-![Calculate ouptput image without dispayed value](./readme/media/output-no-value.png)
-![Calculate output image without dispayed value](./readme/media/output-value.png)
+[Calculate ouptput image without dispayed value](./readme/media/output-no-value.png)
+[Calculate output image without dispayed value](./readme/media/output-value.png)
 
 #### Alert
 * Validation Alert:
@@ -285,8 +285,8 @@ This message confirms the user's action of clearing data, ensuring they understa
 
 #### Footer
 The message in the footer invites users to click on the social icons, which makes it easier for them to stay in touch on social media and give us feedback. Links lead to user-friendly tab-based navigation. 
-![Footer on desktop image ](./readme/media/footer-desktop.png)
-![Footer on mobile image ](./readme/media/footer-mobile.png)
+[Footer on desktop image ](./readme/media/footer-desktop.png)
+[Footer on mobile image ](./readme/media/footer-mobile.png)
 
 #### Future features
 To enhance the functionality and user experience of the Resistor Color Code website, the following features can be added in the future:
@@ -299,8 +299,8 @@ Include additional calculations such as power, current, and voltage using Ohm's 
 ## Bugs / Improvements
 ### Lighthouse
 The lighthouse feature in Google Chrome showed the issue of having some buttons and select elements not having associated label elements. Issue was resolved by adding in labels and the accessibility score went 
-![Select elements issue image](./readme/test/select-bug.png)
-![Button element issue image](./readme/test/button-bug.png)
+[Select elements issue image](./readme/test/select-bug.png)
+[Button element issue image](./readme/test/button-bug.png)
 
 ### HTML
 
