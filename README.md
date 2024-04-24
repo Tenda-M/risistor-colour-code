@@ -19,7 +19,6 @@ A live demo can be found [here.](https://tenda-m.github.io/risistor-colour-code/
 2. [User Experience (UX)](#user-experience-ux)
    1. [User Requirements and Expectations](#user-requirements-and-expectations)
    2. [User Stories](#user-stories)
-   3. [Features To Achieve These Goals](#features-to-achieve-these-goals)
 3. [Design](#design)
    1. [Wireframes](#wireframes)
    2. [Logo](#logo)
@@ -142,24 +141,20 @@ By fulfilling these objectives, the Resistor Colour Code Tool will serve as a us
 * As a user, I want to receive an alert for storage so that i know settings have been applied
 
 
-### Features To Achieve These Goals
+
 
 ## Design
 
 Using colours that closely resemble the base colour of a real resistor—a light or neutral colour with coloured bands—will help the calculator simulate the appearance of resistors. Users may find it easier to mentally relate the digital instrument to the physical parts they are accustomed to handling as a result.
 
 ### Wireframes
-[Wireframe Desktop 4 band](./assets/docs/wireframes/)  
-[Wireframe Desktop 5 band](./assets/docs/wireframes/) 
-[Wireframe Desktop 6 band](./assets/docs/wireframes/) 
+[Wireframe Desktop 4 band](./readme/wireframes/desktop-4-band.png)  
+[Wireframe Desktop 5 band](./readme/wireframes/desktop-5-band.png)  
+[Wireframe Desktop 6 band](./readme/wireframes/desktop-6-band.png)  
 
-[Wireframe Tablet 4 band](./assets/docs/wireframes/)   
-[Wireframe Tablet 5 band](./assets/docs/wireframes/) 
-[Wireframe Tablet 6 band](./assets/docs/wireframes/) 
-
-[Wireframe Mobile 4 band](./assets/docs/wireframes/)   
-[Wireframe Mobile 5 band](./assets/docs/wireframes/) 
-[Wireframe Mobile 6 band](./assets/docs/wireframes/) 
+[Wireframe Mobile 4 band](./readme/wireframes/mobile-4-band.png)     
+[Wireframe Mobile 5 band](./readme/wireframes/mobile-5-band.png)  
+[Wireframe Mobile 6 band](./readme/wireframes/desktop-6-band.png)  
 
 
 ### Logo
@@ -209,9 +204,8 @@ The structure implemented for this project is a single HTML.
 ### Tools
 
 - GitHub
-- Visual Studio Code
+- Gitpod
 - Photoshop
-- Illustrator
 
 ## Features
 
@@ -221,6 +215,10 @@ The heading has a logo that reflects the theme of the website. This is a graphic
 
 Website Title: Next to  the logo, the title "Resistor Colour Code Calculator" that is prominently displayed. This title clearly describes the purpose of the website and reinforces its functionality.
 
+![Heading(Desktop) image](./readme/media/heading-desktop.png)
+
+[Heading(Mobile) image](./readme/media/heading-phone.png)
+
 #### Instruction Button:
 A button labeled "Instructions is placed near the header area.
 
@@ -228,43 +226,67 @@ This button, when clicked, triggers a popup that provides users with a guide on 
 
 This feature enhances user experience by offering accessible assistance, making the tool more user-friendly, especially for first-time visitors
 
+![Instruction button image](./readme/media/instruction-button.png)
+
 #### Interactive Resistor Color Code Calculator:
 Band Selection: Users can select between different resistor types (3-band, 4-band, 5-band, and 6-band), with dropdown menus for each band's color. These selections dynamically adjust the displayed resistor image and the calculated values.
+
+![Desktop 4 band](./readme/media/desktop-4-band-feature.png)  
+![Desktop 5 band](./readme/media/desktop-5-band-feature.png)  
+![Desktop 6 band](./readme/media/desktop-6-band-feature.png)  
+
+![Mobile 4 band](./readme/media/phone-4-band-feature.png)     
+![Mobile 5 band](./readme/media/phone-5-band-feature.png)  
+![Mobile 6 band](./readme/media/phone-6-band-feature.png) 
 
 #### Dynamic Resistor Display: 
 As users select colors for each band, a visual representation of the resistor updates in real-time, reflecting the chosen colors.
 
+![Resistor Display image without colour band selection](./readme/media/display-image-no-band.png)
+![Resistor Display image with four colour band selection](./readme/media/display-image-4-band.png)
+![Resistor Display image with five colour band selection](./readme/media/display-image-5-band.png)
+![Resistor Display image with six colour band selection](./readme/media/display-image-6-band.png)
+
 #### Local Storage Interaction: 
-Functions for saving, loading, and clearing resistor configurations using the browser's local storage allow users to save their settings for later use or clear them as needed.
+Functions for saving, loading, and clearing resistor configurations using the browser's local storage allow users to save their settings for later use or clear them as needed. These functions are triggered by button clicks in the user interface
+
+![Local Storage Interaction image ](./readme/media/storage-buttons.png)
 
 #### Calculation Output:
  After selecting the colors, users can click the "Calculate" button to see the resistance value, tolerance, and the minimum and maximum resistance values based on the tolerance.
+
+![Calculate ouptput image without dispayed value](./readme/media/output-no-value.png)
+![Calculate output image without dispayed value](./readme/media/output-value.png)
 
 #### Alert
 * Validation Alert:
 Purpose: To inform the user that not all required selections have been made before performing a calculation.
 Message: "Please select values from all dropdown menus before calculating."
 This alert ensures that the user completes all necessary inputs to get a valid calculation result, preventing errors or incorrect resistor values.
+![Validation Alert image ](./readme/media/validation-alert.png)
 
 * Save Confirmation Alert:
 Purpose: To confirm that the resistor settings have been successfully saved to the browser's local storage.
 Message: "Settings saved!"
 This feedback reassures the user that their data has been stored correctly and can be retrieved later.
+![Save Confirmation Alert image ](./readme/media/save-alert.png)
 
 * Load Confirmation Alert:
 Purpose: To notify the user that previously saved settings have been successfully loaded.
 Message: "Settings loaded!"
 This alert confirms that the saved data is now active on the calculator, allowing the user to continue where they left off or review saved configurations.
-
-* No Saved Settings Alert:
-Purpose: To inform the user that there are no saved settings available to load.
-Message: "No saved settings found."
-This message is useful for clarifying to the user that there is no saved data, which might be due to never saving any settings or clearing them previously.
+![Load Confirmation Alert image ](./readme/media/loaded-alert.png)
 
 * Clear Settings Alert:
 Purpose: To confirm that all saved settings have been cleared from local storage.
 Message: "Settings cleared!"
 This message confirms the user's action of clearing data, ensuring they understand that all saved configurations have been erased.
+![Clear Settings Alert image ](./readme/media/clear-alert.png)
+
+#### Footer
+The message in the footer invites users to click on the social icons, which makes it easier for them to stay in touch on social media and give us feedback. Links lead to user-friendly tab-based navigation. 
+![Footer on desktop image ](./readme/media/footer-desktop.png)
+![Footer on mobile image ](./readme/media/footer-mobile.png)
 
 #### Future features
 To enhance the functionality and user experience of the Resistor Color Code website, the following features can be added in the future:
@@ -273,6 +295,16 @@ To enhance the functionality and user experience of the Resistor Color Code webs
    Allow users to create accounts to save their preferences, past calculations, and custom configurations securely online.
 * Advanced Calculation Options:
 Include additional calculations such as power, current, and voltage using Ohm's Law, enhancing the tool's usefulness for more complex electronic projects.
+
+## Bugs / Improvements
+### Lighthouse
+The lighthouse feature in Google Chrome showed the issue of having some buttons and select elements not having associated label elements. Issue was resolved by adding in labels and the accessibility score went 
+![Select elements issue image](./readme/test/select-bug.png)
+![Button element issue image](./readme/test/button-bug.png)
+
+### HTML
+
+### JavaScript
 
 ## Validation
 To check for syntax errors on each page of the project, the W3C Markup Validator and W3C CSS Validator Services were utilized.
